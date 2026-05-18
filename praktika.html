@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практика и итог — Электронный курс Python</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+      <path d="M12 2C9.5 2 8 3.5 8 5v2h4v1H6C3.8 8 2 9.8 2 12s1.8 4 4 4h1v-2H6c-1.1 0-2-.9-2-2s.9-2 2-2h6V8h4V5c0-1.5-1.5-3-4-3z" fill="#3776AB"/>
+      <path d="M12 22c2.5 0 4-1.5 4-3v-2h-4v-1h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-1v2h1c1.1 0 2 .9 2 2s-.9 2-2 2h-6v2H8v3c0 1.5 1.5 3 4 3z" fill="#FFD43B"/>
+      <circle cx="9.5" cy="5.5" r="1" fill="#FFD43B"/>
+      <circle cx="14.5" cy="18.5" r="1" fill="#3776AB"/>
+    </svg>
+    Python<span>Курс</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="vvedenie.html">Введение</a>
+    <a href="nachalo.html">Начало работы</a>
+    <a href="osnovy.html">Основы</a>
+    <a href="usloviya.html">Условия и циклы</a>
+    <a href="struktury.html">Структуры данных</a>
+    <a href="funkcii.html">Функции</a>
+    <a href="praktika.html" class="active">Практика</a>
+    <a href="kontakty.html">Контакты</a>
+  </div>
+  <div class="nav-module-btns">
+    <a href="funkcii.html" class="nav-btn-ghost">← Назад</a>
+    <a href="kontakty.html" class="nav-btn">Контакты →</a>
+  </div>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Главная</a>
+  <a href="vvedenie.html">Введение в Python</a>
+  <a href="nachalo.html">Начало работы</a>
+  <a href="osnovy.html">Основы Python</a>
+  <a href="usloviya.html">Условия и циклы</a>
+  <a href="struktury.html">Структуры данных</a>
+  <a href="funkcii.html">Функции</a>
+  <a href="praktika.html" class="active">Практика и итог</a>
+  <a href="kontakty.html">Контакты</a>
+</div>
+
+<div class="course-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">Программа курса</div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Модуль 7</div>
+      <a href="praktika.html" class="sidebar-link active"><span class="sidebar-link-icon">07</span> Практика и итог</a>
+      <a href="praktika.html#zadachi" class="sidebar-link"><span class="sidebar-link-icon">—</span> Задачи по темам</a>
+      <a href="praktika.html#kalkulator" class="sidebar-link"><span class="sidebar-link-icon">—</span> Проект: Калькулятор</a>
+      <a href="praktika.html#ugadai" class="sidebar-link"><span class="sidebar-link-icon">—</span> Проект: Угадай число</a>
+      <a href="praktika.html#spisok-zadach" class="sidebar-link"><span class="sidebar-link-icon">—</span> Проект: Список задач</a>
+      <a href="praktika.html#itog" class="sidebar-link"><span class="sidebar-link-icon">—</span> Итог курса</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Другие модули</div>
+      <a href="vvedenie.html" class="sidebar-link"><span class="sidebar-link-icon">01</span> Введение</a>
+      <a href="nachalo.html" class="sidebar-link"><span class="sidebar-link-icon">02</span> Начало работы</a>
+      <a href="osnovy.html" class="sidebar-link"><span class="sidebar-link-icon">03</span> Основы Python</a>
+      <a href="usloviya.html" class="sidebar-link"><span class="sidebar-link-icon">04</span> Условия и циклы</a>
+      <a href="struktury.html" class="sidebar-link"><span class="sidebar-link-icon">05</span> Структуры данных</a>
+      <a href="funkcii.html" class="sidebar-link"><span class="sidebar-link-icon">06</span> Функции</a>
+    </div>
+  </aside>
+
+  <main class="course-main">
+    <div class="course-content">
+
+      <div class="page-header">
+        <div class="page-label">Модуль 07</div>
+        <h1 class="page-title">Практика и <span>итог</span></h1>
+        <p class="page-desc">Закрепите пройденный материал — решите задачи и разберите три мини-проекта на Python.</p>
+      </div>
+
+      <!-- ЗАДАЧИ -->
+      <h2 class="section-h" id="zadachi">Задачи по темам</h2>
+      <p>Решите следующие задачи самостоятельно. Подсказки спрятаны под каждым заданием.</p>
+
+      <h3 class="sub-h">Задача 1 — Чётное или нечётное</h3>
+      <p>Напишите программу, которая принимает число и выводит, чётное оно или нечётное.</p>
+      <div class="try-block">
+        <div class="try-header">
+          <div class="try-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Задача 1
+          </div>
+          <button class="try-run-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Запустить
+          </button>
+        </div>
+        <div class="try-editor">
+          <textarea>число = 7
+
+if число % 2 == 0:
+    print(f"{число} — чётное")
+else:
+    print(f"{число} — нечётное")</textarea>
+        </div>
+        <div class="try-output">
+          <div class="try-output-label">Вывод</div>
+          <div class="try-output-box"></div>
+        </div>
+      </div>
+
+      <h3 class="sub-h">Задача 2 — Сумма элементов списка</h3>
+      <p>Напишите функцию, которая принимает список чисел и возвращает их сумму <strong>без использования</strong> встроенной функции <code class="inline">sum()</code>.</p>
+      <div class="try-block">
+        <div class="try-header">
+          <div class="try-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Задача 2
+          </div>
+          <button class="try-run-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Запустить
+          </button>
+        </div>
+        <div class="try-editor">
+          <textarea>def моя_сумма(числа):
+    итог = 0
+    for число in числа:
+        итог += число
+    return итог
+
+список = [3, 7, 2, 9, 4]
+print(f"Сумма: {моя_сумма(список)}")</textarea>
+        </div>
+        <div class="try-output">
+          <div class="try-output-label">Вывод</div>
+          <div class="try-output-box"></div>
+        </div>
+      </div>
+
+      <h3 class="sub-h">Задача 3 — Таблица умножения</h3>
+      <p>Выведите таблицу умножения для числа от 1 до 10 с помощью цикла.</p>
+      <div class="try-block">
+        <div class="try-header">
+          <div class="try-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Задача 3
+          </div>
+          <button class="try-run-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Запустить
+          </button>
+        </div>
+        <div class="try-editor">
+          <textarea>def таблица_умножения(n):
+    print(f"Таблица умножения на {n}:")
+    for i in range(1, 11):
+        print(f"  {n} x {i:2} = {n * i:3}")
+
+таблица_умножения(7)</textarea>
+        </div>
+        <div class="try-output">
+          <div class="try-output-label">Вывод</div>
+          <div class="try-output-box"></div>
+        </div>
+      </div>
+
+      <h3 class="sub-h">Задача 4 — Палиндром</h3>
+      <p>Проверьте, является ли введённая строка палиндромом (читается одинаково в обе стороны).</p>
+      <div class="try-block">
+        <div class="try-header">
+          <div class="try-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Задача 4
+          </div>
+          <button class="try-run-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Запустить
+          </button>
+        </div>
+        <div class="try-editor">
+          <textarea>def палиндром(слово):
+    слово = слово.lower().replace(" ", "")
+    return слово == слово[::-1]
+
+слова = ["kayak", "python", "level", "radar", "hello"]
+for слово in слова:
+    результат = "палиндром" if палиндром(слово) else "не палиндром"
+    print(f'"{слово}" — {результат}')</textarea>
+        </div>
+        <div class="try-output">
+          <div class="try-output-label">Вывод</div>
+          <div class="try-output-box"></div>
+        </div>
+      </div>
+
+      <!-- ПРОЕКТ 1: КАЛЬКУЛЯТОР -->
+      <h2 class="section-h" id="kalkulator">Проект 1 — Калькулятор</h2>
+      <p>
+        Создадим простой консольный калькулятор, который выполняет основные арифметические операции.
+        Этот проект объединяет функции, условия и обработку ввода.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">calculator.py</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="kw">def</span> <span class="fn">сложить</span>(<span class="var">a</span>, <span class="var">b</span>):
+    <span class="kw">return</span> <span class="var">a</span> + <span class="var">b</span>
+
+<span class="kw">def</span> <span class="fn">вычесть</span>(<span class="var">a</span>, <span class="var">b</span>):
+    <span class="kw">return</span> <span class="var">a</span> - <span class="var">b</span>
+
+<span class="kw">def</span> <span class="fn">умножить</span>(<span class="var">a</span>, <span class="var">b</span>):
+    <span class="kw">return</span> <span class="var">a</span> * <span class="var">b</span>
+
+<span class="kw">def</span> <span class="fn">разделить</span>(<span class="var">a</span>, <span class="var">b</span>):
+    <span class="kw">if</span> <span class="var">b</span> == <span class="num">0</span>:
+        <span class="kw">return</span> <span class="str">"Ошибка: деление на ноль!"</span>
+    <span class="kw">return</span> <span class="var">a</span> / <span class="var">b</span>
+
+<span class="kw">def</span> <span class="fn">калькулятор</span>(<span class="var">a</span>, <span class="var">операция</span>, <span class="var">b</span>):
+    <span class="var">операции</span> = {
+        <span class="str">"+"</span>: <span class="fn">сложить</span>,
+        <span class="str">"-"</span>: <span class="fn">вычесть</span>,
+        <span class="str">"*"</span>: <span class="fn">умножить</span>,
+        <span class="str">"/"</span>: <span class="fn">разделить</span>
+    }
+    <span class="kw">if</span> <span class="var">операция</span> <span class="kw">not in</span> <span class="var">операции</span>:
+        <span class="kw">return</span> <span class="str">"Неизвестная операция"</span>
+    <span class="var">функция</span> = <span class="var">операции</span>[<span class="var">операция</span>]
+    <span class="kw">return</span> <span class="fn">функция</span>(<span class="var">a</span>, <span class="var">b</span>)
+
+<span class="cm"># Тестирование</span>
+<span class="var">примеры</span> = [
+    (<span class="num">10</span>, <span class="str">"+"</span>, <span class="num">5</span>),
+    (<span class="num">10</span>, <span class="str">"-"</span>, <span class="num">3</span>),
+    (<span class="num">4</span>,  <span class="str">"*"</span>, <span class="num">7</span>),
+    (<span class="num">15</span>, <span class="str">"/"</span>, <span class="num">4</span>),
+    (<span class="num">9</span>,  <span class="str">"/"</span>, <span class="num">0</span>),
+]
+
+<span class="kw">for</span> <span class="var">a</span>, <span class="var">оп</span>, <span class="var">b</span> <span class="kw">in</span> <span class="var">примеры</span>:
+    <span class="var">рез</span> = <span class="fn">калькулятор</span>(<span class="var">a</span>, <span class="var">оп</span>, <span class="var">b</span>)
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"{a} {оп} {b} = {рез}"</span>)</pre>
+      </div>
+
+      <div class="info-box">
+        <strong>Что использовано:</strong> функции, словарь как диспетчер операций, цикл for,
+        обработка ошибки деления на ноль, f-строки для форматирования вывода.
+      </div>
+
+      <!-- ПРОЕКТ 2: УГАДАЙ ЧИСЛО -->
+      <h2 class="section-h" id="ugadai">Проект 2 — Угадай число</h2>
+      <p>
+        Программа загадывает случайное число от 1 до 100. Игрок вводит попытки, и программа подсказывает
+        «больше» или «меньше». Используем модуль <code class="inline">random</code> из стандартной библиотеки.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">guess_game.py</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="kw">import</span> <span class="var">random</span>
+
+<span class="kw">def</span> <span class="fn">игра_угадай_число</span>():
+    <span class="var">загаданное</span> = <span class="var">random</span>.<span class="fn">randint</span>(<span class="num">1</span>, <span class="num">100</span>)
+    <span class="var">попыток</span> = <span class="num">0</span>
+    <span class="var">максимум_попыток</span> = <span class="num">7</span>
+
+    <span class="builtin">print</span>(<span class="str">"Я загадал число от 1 до 100."</span>)
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"У вас {максимум_попыток} попыток.\n"</span>)
+
+    <span class="kw">while</span> <span class="var">попыток</span> < <span class="var">максимум_попыток</span>:
+        <span class="var">попыток</span> += <span class="num">1</span>
+        <span class="var">осталось</span> = <span class="var">максимум_попыток</span> - <span class="var">попыток</span> + <span class="num">1</span>
+
+        <span class="kw">try</span>:
+            <span class="var">попытка</span> = <span class="builtin">int</span>(<span class="builtin">input</span>(<span class="fn">f</span><span class="str">"Попытка {попыток}/{максимум_попыток}: "</span>))
+        <span class="kw">except</span> <span class="var">ValueError</span>:
+            <span class="builtin">print</span>(<span class="str">"Введите целое число!\n"</span>)
+            <span class="var">попыток</span> -= <span class="num">1</span>
+            <span class="kw">continue</span>
+
+        <span class="kw">if</span> <span class="var">попытка</span> == <span class="var">загаданное</span>:
+            <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"\nПравильно! Вы угадали за {попыток} попыток!"</span>)
+            <span class="kw">return</span>
+        <span class="kw">elif</span> <span class="var">попытка</span> < <span class="var">загаданное</span>:
+            <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Больше. Осталось попыток: {осталось - 1}\n"</span>)
+        <span class="kw">else</span>:
+            <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Меньше. Осталось попыток: {осталось - 1}\n"</span>)
+
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"\nПопытки закончились. Загаданное число: {загаданное}"</span>)
+
+<span class="fn">игра_угадай_число</span>()</pre>
+      </div>
+
+      <!-- ПРОЕКТ 3: СПИСОК ЗАДАЧ -->
+      <h2 class="section-h" id="spisok-zadach">Проект 3 — Менеджер задач</h2>
+      <p>
+        Консольное приложение для управления списком дел. Демонстрирует работу со словарями,
+        списками и функциями в связке.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">todo.py</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">задачи</span> = []
+
+<span class="kw">def</span> <span class="fn">добавить_задачу</span>(<span class="var">название</span>):
+    <span class="var">задача</span> = {<span class="str">"название"</span>: <span class="var">название</span>, <span class="str">"выполнено"</span>: <span class="kw">False</span>}
+    <span class="var">задачи</span>.<span class="fn">append</span>(<span class="var">задача</span>)
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">'Добавлено: "{название}"'</span>)
+
+<span class="kw">def</span> <span class="fn">выполнить_задачу</span>(<span class="var">номер</span>):
+    <span class="kw">if</span> <span class="num">0</span> <= <span class="var">номер</span> < <span class="builtin">len</span>(<span class="var">задачи</span>):
+        <span class="var">задачи</span>[<span class="var">номер</span>][<span class="str">"выполнено"</span>] = <span class="kw">True</span>
+        <span class="builtin">print</span>(<span class="fn">f</span><span class="str">'Выполнено: "{задачи[номер]["название"]}"'</span>)
+    <span class="kw">else</span>:
+        <span class="builtin">print</span>(<span class="str">"Задача не найдена"</span>)
+
+<span class="kw">def</span> <span class="fn">показать_задачи</span>():
+    <span class="kw">if not</span> <span class="var">задачи</span>:
+        <span class="builtin">print</span>(<span class="str">"Список задач пуст"</span>)
+        <span class="kw">return</span>
+    <span class="builtin">print</span>(<span class="str">"\n--- Список задач ---"</span>)
+    <span class="kw">for</span> <span class="var">i</span>, <span class="var">з</span> <span class="kw">in</span> <span class="builtin">enumerate</span>(<span class="var">задачи</span>):
+        <span class="var">статус</span> = <span class="str">"[+]"</span> <span class="kw">if</span> <span class="var">з</span>[<span class="str">"выполнено"</span>] <span class="kw">else</span> <span class="str">"[ ]"</span>
+        <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"  {i}. {статус} {з['название']}"</span>)
+    <span class="var">выполнено</span> = <span class="builtin">sum</span>(<span class="num">1</span> <span class="kw">for</span> <span class="var">з</span> <span class="kw">in</span> <span class="var">задачи</span> <span class="kw">if</span> <span class="var">з</span>[<span class="str">"выполнено"</span>])
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Выполнено: {выполнено}/{len(задачи)}\n"</span>)
+
+<span class="cm"># Демонстрация</span>
+<span class="fn">добавить_задачу</span>(<span class="str">"Изучить переменные Python"</span>)
+<span class="fn">добавить_задачу</span>(<span class="str">"Разобрать циклы for и while"</span>)
+<span class="fn">добавить_задачу</span>(<span class="str">"Написать первую функцию"</span>)
+<span class="fn">добавить_задачу</span>(<span class="str">"Сделать проект-калькулятор"</span>)
+
+<span class="fn">выполнить_задачу</span>(<span class="num">0</span>)
+<span class="fn">выполнить_задачу</span>(<span class="num">1</span>)
+<span class="fn">показать_задачи</span>()</pre>
+      </div>
+
+      <!-- ИТОГ -->
+      <h2 class="section-h" id="itog">Итог курса</h2>
+      <p>Поздравляем с завершением курса! Вот что вы изучили:</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Модуль</th><th>Тема</th><th>Ключевые навыки</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Введение в Python</td>
+              <td>История языка, области применения, преимущества</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>Начало работы</td>
+              <td>Установка, VS Code, первая программа, запуск файлов</td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>Основы Python</td>
+              <td>Переменные, типы данных, операторы, строки, ввод/вывод</td>
+            </tr>
+            <tr>
+              <td>04</td>
+              <td>Условия и циклы</td>
+              <td>if/elif/else, for, while, break, continue</td>
+            </tr>
+            <tr>
+              <td>05</td>
+              <td>Структуры данных</td>
+              <td>list, tuple, dict, set — создание и методы</td>
+            </tr>
+            <tr>
+              <td>06</td>
+              <td>Функции</td>
+              <td>def, параметры, return, lambda, встроенные функции</td>
+            </tr>
+            <tr>
+              <td>07</td>
+              <td>Практика и итог</td>
+              <td>Задачи, калькулятор, игра, менеджер задач</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-box">
+        <strong>Что дальше?</strong> После освоения этого курса вы готовы двигаться дальше:
+        изучите объектно-ориентированное программирование (классы и объекты),
+        работу с файлами и базами данных, а затем выберите направление —
+        веб-разработка (Django/Flask), анализ данных (pandas/NumPy) или автоматизация.
+      </div>
+
+      <div class="page-nav">
+        <a href="funkcii.html" class="page-nav-btn">
+          <span class="page-nav-label">Предыдущий модуль</span>
+          <span class="page-nav-title">Функции</span>
+        </a>
+        <a href="kontakty.html" class="page-nav-btn next">
+          <span class="page-nav-label">Далее</span>
+          <span class="page-nav-title">Контакты</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

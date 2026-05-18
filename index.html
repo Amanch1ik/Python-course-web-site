@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Язык программирования Python — Электронный курс</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+      <path d="M12 2C9.5 2 8 3.5 8 5v2h4v1H6C3.8 8 2 9.8 2 12s1.8 4 4 4h1v-2H6c-1.1 0-2-.9-2-2s.9-2 2-2h6V8h4V5c0-1.5-1.5-3-4-3z" fill="#3776AB"/>
+      <path d="M12 22c2.5 0 4-1.5 4-3v-2h-4v-1h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-1v2h1c1.1 0 2 .9 2 2s-.9 2-2 2h-6v2H8v3c0 1.5 1.5 3 4 3z" fill="#FFD43B"/>
+      <circle cx="9.5" cy="5.5" r="1" fill="#FFD43B"/>
+      <circle cx="14.5" cy="18.5" r="1" fill="#3776AB"/>
+    </svg>
+    Python<span>Курс</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Главная</a>
+    <a href="vvedenie.html">Введение</a>
+    <a href="nachalo.html">Начало работы</a>
+    <a href="osnovy.html">Основы</a>
+    <a href="usloviya.html">Условия и циклы</a>
+    <a href="struktury.html">Структуры данных</a>
+    <a href="funkcii.html">Функции</a>
+    <a href="praktika.html">Практика</a>
+    <a href="kontakty.html">Контакты</a>
+  </div>
+  <a href="vvedenie.html" class="nav-btn">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+    Начать учиться
+  </a>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Главная</a>
+  <a href="vvedenie.html">Введение в Python</a>
+  <a href="nachalo.html">Начало работы</a>
+  <a href="osnovy.html">Основы Python</a>
+  <a href="usloviya.html">Условия и циклы</a>
+  <a href="struktury.html">Структуры данных</a>
+  <a href="funkcii.html">Функции</a>
+  <a href="praktika.html">Практика и итог</a>
+  <a href="kontakty.html">Контакты</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Электронный курс — КГТУ им. И. Раззакова
+      </div>
+      <h1 class="hero-title">
+        Изучите<br>
+        <span class="line-yellow">Python</span><br>
+        <span class="line-blue">с нуля</span>
+      </h1>
+      <p class="hero-desc">
+        Практический курс по языку программирования Python — от основ синтаксиса
+        до работы с функциями и структурами данных. Теория, примеры кода и задания
+        в одном месте.
+      </p>
+      <div class="hero-actions">
+        <a href="vvedenie.html" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Начать изучение
+        </a>
+        <a href="#modules" class="btn-secondary">
+          Все модули
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">7</div>
+          <div class="hero-stat-label">Модулей</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">40+</div>
+          <div class="hero-stat-label">Примеров кода</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">0</div>
+          <div class="hero-stat-label">Опыта нужно</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-window">
+        <div class="code-window-header">
+          <div class="code-window-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="code-window-title">main.py</div>
+        </div>
+        <div class="code-window-body">
+<span class="code-line"><span class="code-line-num">1</span><span class="cm"># Мой первый Python-код</span></span>
+<span class="code-line"><span class="code-line-num">2</span></span>
+<span class="code-line"><span class="code-line-num">3</span><span class="kw">def</span> <span class="fn">поприветствовать</span>(<span class="var">имя</span>):</span>
+<span class="code-line"><span class="code-line-num">4</span>    <span class="var">сообщение</span> = <span class="fn">f</span><span class="str">"Привет, {имя}!"</span></span>
+<span class="code-line"><span class="code-line-num">5</span>    <span class="kw">return</span> <span class="var">сообщение</span></span>
+<span class="code-line"><span class="code-line-num">6</span></span>
+<span class="code-line"><span class="code-line-num">7</span><span class="var">студенты</span> = [<span class="str">"Нурмухаммед"</span>, <span class="str">"Айгерим"</span>, <span class="str">"Даниял"</span>]</span>
+<span class="code-line"><span class="code-line-num">8</span></span>
+<span class="code-line"><span class="code-line-num">9</span><span class="kw">for</span> <span class="var">студент</span> <span class="kw">in</span> <span class="var">студенты</span>:</span>
+<span class="code-line"><span class="code-line-num">10</span>   <span class="builtin">print</span>(<span class="fn">поприветствовать</span>(<span class="var">студент</span>))</span>
+<span class="code-line"><span class="code-line-num">11</span></span>
+<span class="code-line"><span class="code-line-num">12</span><span class="cm"># Вывод: Привет, Нурмухаммед!</span></span>
+<span class="code-line"><span class="code-line-num">13</span><span class="cm">#        Привет, Айгерим!</span><span class="code-cursor"></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Почему этот курс</span>
+      <h2 class="section-title">Всё необходимое<br><span>в одном месте</span></h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" data-aos>
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="feature-title">Примеры кода на каждом шаге</div>
+        <div class="feature-desc">Каждая тема сопровождается реальными примерами кода с пояснениями. Вы видите теорию и сразу её применение.</div>
+      </div>
+      <div class="feature-card" data-aos data-aos-delay="100">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="feature-title">Структурированная подача</div>
+        <div class="feature-desc">Материал выстроен от простого к сложному. Каждый модуль логически связан с предыдущим и следующим.</div>
+      </div>
+      <div class="feature-card" data-aos data-aos-delay="200">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="feature-title">Практические задания</div>
+        <div class="feature-desc">Раздел практики содержит задачи для самостоятельного решения — от простых до комплексных.</div>
+      </div>
+      <div class="feature-card" data-aos data-aos-delay="300">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="feature-title">Доступ с любого устройства</div>
+        <div class="feature-desc">Сайт работает в браузере на ПК, планшете и телефоне. Установка программ не требуется.</div>
+      </div>
+      <div class="feature-card" data-aos data-aos-delay="400">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </div>
+        <div class="feature-title">Синтаксис с нуля</div>
+        <div class="feature-desc">Не нужен опыт программирования. Курс начинается с самых основ и постепенно переходит к сложным темам.</div>
+      </div>
+      <div class="feature-card" data-aos data-aos-delay="500">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="feature-title">Чистый и понятный Python</div>
+        <div class="feature-desc">Весь код написан по стандарту PEP 8. Вы сразу учитесь писать профессиональный, читаемый код.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section id="modules">
+  <div class="container">
+    <div>
+      <span class="section-label">Программа курса</span>
+      <h2 class="section-title">Модули курса</h2>
+      <p class="section-desc">7 тематических модулей — от первого знакомства с Python до написания полноценных программ.</p>
+    </div>
+    <div class="modules-grid">
+      <a href="vvedenie.html" class="module-card" data-aos>
+        <div class="module-num">01</div>
+        <div class="module-body">
+          <div class="module-title">Введение в Python</div>
+          <div class="module-desc">Что такое Python, история языка, области применения и его главные преимущества.</div>
+          <div class="module-tags"><span class="tag">история</span><span class="tag">применение</span><span class="tag">особенности</span></div>
+        </div>
+        <svg class="module-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="nachalo.html" class="module-card" data-aos data-aos-delay="50">
+        <div class="module-num">02</div>
+        <div class="module-body">
+          <div class="module-title">Начало работы с Python</div>
+          <div class="module-desc">Установка Python и среды разработки. Первая программа. Запуск кода в терминале.</div>
+          <div class="module-tags"><span class="tag">установка</span><span class="tag">VS Code</span><span class="tag">hello world</span></div>
+        </div>
+        <svg class="module-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="osnovy.html" class="module-card" data-aos data-aos-delay="100">
+        <div class="module-num">03</div>
+        <div class="module-body">
+          <div class="module-title">Основы Python</div>
+          <div class="module-desc">Переменные, типы данных, операторы, ввод и вывод, комментарии.</div>
+          <div class="module-tags"><span class="tag">переменные</span><span class="tag">типы</span><span class="tag">операторы</span><span class="tag">print/input</span></div>
+        </div>
+        <svg class="module-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="usloviya.html" class="module-card" data-aos data-aos-delay="150">
+        <div class="module-num">04</div>
+        <div class="module-body">
+          <div class="module-title">Условия и циклы</div>
+          <div class="module-desc">Ветвление программы с if/elif/else. Циклы for и while. Управляющие операторы break и continue.</div>
+          <div class="module-tags"><span class="tag">if/else</span><span class="tag">for</span><span class="tag">while</span><span class="tag">break</span></div>
+        </div>
+        <svg class="module-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="struktury.html" class="module-card" data-aos data-aos-delay="200">
+        <div class="module-num">05</div>
+        <div class="module-body">
+          <div class="module-title">Структуры данных</div>
+          <div class="module-desc">Списки, кортежи, словари и множества. Когда и как использовать каждый тип.</div>
+          <div class="module-tags"><span class="tag">list</span><span class="tag">tuple</span><span class="tag">dict</span><span class="tag">set</span></div>
+        </div>
+        <svg class="module-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="funkcii.html" class="module-card" data-aos data-aos-delay="250">
+        <div class="module-num">06</div>
+        <div class="module-body">
+          <div class="module-title">Функции</div>
+          <div class="module-desc">Определение и вызов функций, параметры, возврат значений, лямбда-функции и рекурсия.</div>
+          <div class="module-tags"><span class="tag">def</span><span class="tag">return</span><span class="tag">lambda</span><span class="tag">рекурсия</span></div>
+        </div>
+        <svg class="module-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="praktika.html" class="module-card" data-aos data-aos-delay="300">
+        <div class="module-num">07</div>
+        <div class="module-body">
+          <div class="module-title">Практика и итог</div>
+          <div class="module-desc">Комплексные задачи для закрепления. Мини-проекты: калькулятор, работа со списками, игра с угадыванием числа.</div>
+          <div class="module-tags"><span class="tag">задачи</span><span class="tag">проекты</span><span class="tag">итог</span></div>
+        </div>
+        <svg class="module-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TECH -->
+<section class="tech">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Технологии</span>
+      <h2 class="section-title">Использованный <span>стек</span></h2>
+      <p class="section-desc">Сайт разработан с использованием современных веб-технологий без зависимостей от серверной части.</p>
+    </div>
+    <div class="tech-list">
+      <div class="tech-item" data-aos>
+        <div class="tech-item-icon" style="background:rgba(227,76,38,0.15);color:#e34c26;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+        </div>
+        HTML5
+      </div>
+      <div class="tech-item" data-aos data-aos-delay="80">
+        <div class="tech-item-icon" style="background:rgba(38,77,228,0.15);color:#264de4;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
+        </div>
+        CSS3
+      </div>
+      <div class="tech-item" data-aos data-aos-delay="160">
+        <div class="tech-item-icon" style="background:rgba(247,185,35,0.15);color:#f7b923;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+        </div>
+        JavaScript
+      </div>
+      <div class="tech-item" data-aos data-aos-delay="240">
+        <div class="tech-item-icon" style="background:rgba(119,82,254,0.15);color:#7952b3;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.956v3.348h2.29c1.429 0 2.071-.551 2.071-1.716 0-1.12-.683-1.632-2.223-1.632zM24 11.39v1.218c-1.128.386-1.808.Billboard 1.33h-.019c.064.43.998.987.998 2.218 0 2.946-2.484 3.83-5.15 3.83H9.32v-13h10.356C22.303 5.659 24 7.11 24 9.47c0 1.057-.436 2.025-1.236 2.555.66.356 1.236.905 1.236 1.365zm-6.598 5.063h-7.086v-3.348h7.086c1.429 0 2.07-.551 2.07-1.716 0-1.12-.683-1.632-2.222-1.632h-6.934V8.202h7.086c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572h.334z"/></svg>
+        </div>
+        Bootstrap 5
+      </div>
+      <div class="tech-item" data-aos data-aos-delay="320">
+        <div class="tech-item-icon" style="background:rgba(0,122,204,0.15);color:#007acc;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 11.852l11.333-11.19 2.666 2.666-8.666 8.524 8.666 8.524-2.666 2.666L0 11.852zm12 0l11.333-11.19 2.666 2.666-8.666 8.524 8.666 8.524-2.666 2.666L12 11.852z"/></svg>
+        </div>
+        VS Code
+      </div>
+      <div class="tech-item" data-aos data-aos-delay="400">
+        <div class="tech-item-icon" style="background:rgba(55,118,171,0.15);color:#3776AB;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.83l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.23l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.24l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05 1.07.13zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09-.33.22zM21.1 6.11l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.31.33-.25.35-.19.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01.21.03zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08-.33.23z"/></svg>
+        </div>
+        Python 3.x
+      </div>
+      <div class="tech-item" data-aos data-aos-delay="480">
+        <div class="tech-item-icon" style="background:rgba(86,211,100,0.1);color:#56d364;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        Chrome DevTools
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">Python<span>Курс</span></a>
+    <div class="footer-links">
+      <a href="vvedenie.html">Введение</a>
+      <a href="osnovy.html">Основы</a>
+      <a href="praktika.html">Практика</a>
+      <a href="kontakty.html">Контакты</a>
+    </div>
+    <div class="footer-copy">КГТУ им. И. Раззакова — 2026</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

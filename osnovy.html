@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Основы Python — Электронный курс</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+      <path d="M12 2C9.5 2 8 3.5 8 5v2h4v1H6C3.8 8 2 9.8 2 12s1.8 4 4 4h1v-2H6c-1.1 0-2-.9-2-2s.9-2 2-2h6V8h4V5c0-1.5-1.5-3-4-3z" fill="#3776AB"/>
+      <path d="M12 22c2.5 0 4-1.5 4-3v-2h-4v-1h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-1v2h1c1.1 0 2 .9 2 2s-.9 2-2 2h-6v2H8v3c0 1.5 1.5 3 4 3z" fill="#FFD43B"/>
+      <circle cx="9.5" cy="5.5" r="1" fill="#FFD43B"/>
+      <circle cx="14.5" cy="18.5" r="1" fill="#3776AB"/>
+    </svg>
+    Python<span>Курс</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="vvedenie.html">Введение</a>
+    <a href="nachalo.html">Начало работы</a>
+    <a href="osnovy.html" class="active">Основы</a>
+    <a href="usloviya.html">Условия и циклы</a>
+    <a href="struktury.html">Структуры данных</a>
+    <a href="funkcii.html">Функции</a>
+    <a href="praktika.html">Практика</a>
+    <a href="kontakty.html">Контакты</a>
+  </div>
+  <div class="nav-module-btns">
+    <a href="nachalo.html" class="nav-btn-ghost">← Назад</a>
+    <a href="usloviya.html" class="nav-btn">Следующий →</a>
+  </div>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Главная</a>
+  <a href="vvedenie.html">Введение в Python</a>
+  <a href="nachalo.html">Начало работы</a>
+  <a href="osnovy.html" class="active">Основы Python</a>
+  <a href="usloviya.html">Условия и циклы</a>
+  <a href="struktury.html">Структуры данных</a>
+  <a href="funkcii.html">Функции</a>
+  <a href="praktika.html">Практика и итог</a>
+  <a href="kontakty.html">Контакты</a>
+</div>
+
+<div class="course-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">Программа курса</div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Модуль 3</div>
+      <a href="osnovy.html" class="sidebar-link active"><span class="sidebar-link-icon">03</span> Основы Python</a>
+      <a href="osnovy.html#peremennye" class="sidebar-link"><span class="sidebar-link-icon">—</span> Переменные</a>
+      <a href="osnovy.html#tipy" class="sidebar-link"><span class="sidebar-link-icon">—</span> Типы данных</a>
+      <a href="osnovy.html#operatory" class="sidebar-link"><span class="sidebar-link-icon">—</span> Операторы</a>
+      <a href="osnovy.html#stroki" class="sidebar-link"><span class="sidebar-link-icon">—</span> Строки</a>
+      <a href="osnovy.html#vvod-vyvod" class="sidebar-link"><span class="sidebar-link-icon">—</span> Ввод и вывод</a>
+      <a href="osnovy.html#kommentarii" class="sidebar-link"><span class="sidebar-link-icon">—</span> Комментарии</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Другие модули</div>
+      <a href="vvedenie.html" class="sidebar-link"><span class="sidebar-link-icon">01</span> Введение</a>
+      <a href="nachalo.html" class="sidebar-link"><span class="sidebar-link-icon">02</span> Начало работы</a>
+      <a href="usloviya.html" class="sidebar-link"><span class="sidebar-link-icon">04</span> Условия и циклы</a>
+      <a href="struktury.html" class="sidebar-link"><span class="sidebar-link-icon">05</span> Структуры данных</a>
+      <a href="funkcii.html" class="sidebar-link"><span class="sidebar-link-icon">06</span> Функции</a>
+      <a href="praktika.html" class="sidebar-link"><span class="sidebar-link-icon">07</span> Практика и итог</a>
+    </div>
+  </aside>
+
+  <main class="course-main">
+    <div class="course-content">
+
+      <div class="page-header">
+        <div class="page-label">Модуль 03</div>
+        <h1 class="page-title">Основы <span>Python</span></h1>
+        <p class="page-desc">Переменные, типы данных, операторы, строки, ввод и вывод — фундамент любой Python-программы.</p>
+      </div>
+
+      <!-- ПЕРЕМЕННЫЕ -->
+      <h2 class="section-h" id="peremennye">Переменные</h2>
+      <p>
+        <strong>Переменная</strong> — это именованная ячейка памяти, в которой хранится значение.
+        В Python не нужно объявлять тип переменной заранее — он определяется автоматически.
+      </p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">имя</span> = <span class="str">"Нурмухаммед"</span>       <span class="cm"># строка</span>
+<span class="var">возраст</span> = <span class="num">20</span>               <span class="cm"># целое число</span>
+<span class="var">средний_балл</span> = <span class="num">4.85</span>        <span class="cm"># дробное число</span>
+<span class="var">студент</span> = <span class="kw">True</span>             <span class="cm"># булево значение</span>
+
+<span class="builtin">print</span>(<span class="var">имя</span>, <span class="var">возраст</span>)         <span class="cm"># Нурмухаммед 20</span></pre>
+      </div>
+
+      <h3 class="sub-h">Правила именования переменных</h3>
+      <ul class="list">
+        <li>Только буквы, цифры и знак подчёркивания <code class="inline">_</code></li>
+        <li>Не может начинаться с цифры</li>
+        <li>Регистр имеет значение: <code class="inline">name</code> и <code class="inline">Name</code> — разные переменные</li>
+        <li>Нельзя использовать ключевые слова Python (<code class="inline">if</code>, <code class="inline">for</code>, <code class="inline">while</code> и др.)</li>
+        <li>По стандарту PEP 8 — используйте <code class="inline">snake_case</code>: <code class="inline">средний_балл</code>, <code class="inline">имя_пользователя</code></li>
+      </ul>
+
+      <div class="warn-box">
+        <strong>Множественное присваивание:</strong> Python позволяет присвоить значения нескольким переменным в одну строку.
+      </div>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="cm"># Несколько переменных в одну строку</span>
+<span class="var">x</span>, <span class="var">y</span>, <span class="var">z</span> = <span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>
+<span class="builtin">print</span>(<span class="var">x</span>, <span class="var">y</span>, <span class="var">z</span>)  <span class="cm"># 1 2 3</span>
+
+<span class="cm"># Одно значение — нескольким переменным</span>
+<span class="var">a</span> = <span class="var">b</span> = <span class="var">c</span> = <span class="num">0</span>
+<span class="builtin">print</span>(<span class="var">a</span>, <span class="var">b</span>, <span class="var">c</span>)  <span class="cm"># 0 0 0</span></pre>
+      </div>
+
+      <!-- ТИПЫ ДАННЫХ -->
+      <h2 class="section-h" id="tipy">Типы данных</h2>
+      <p>
+        Python автоматически определяет тип значения. Узнать тип переменной можно функцией <code class="inline">type()</code>.
+      </p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Тип</th><th>Ключевое слово</th><th>Пример</th><th>Описание</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Целое число</td><td><code class="inline">int</code></td><td><code class="inline">42, -7, 0</code></td><td>Целые числа без дробной части</td></tr>
+            <tr><td>Дробное число</td><td><code class="inline">float</code></td><td><code class="inline">3.14, -0.5</code></td><td>Числа с плавающей точкой</td></tr>
+            <tr><td>Строка</td><td><code class="inline">str</code></td><td><code class="inline">"Привет"</code></td><td>Текстовые данные в кавычках</td></tr>
+            <tr><td>Булево</td><td><code class="inline">bool</code></td><td><code class="inline">True, False</code></td><td>Логические значения да/нет</td></tr>
+            <tr><td>Ничего</td><td><code class="inline">NoneType</code></td><td><code class="inline">None</code></td><td>Отсутствие значения</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">a</span> = <span class="num">10</span>
+<span class="var">b</span> = <span class="num">3.14</span>
+<span class="var">c</span> = <span class="str">"Python"</span>
+<span class="var">d</span> = <span class="kw">True</span>
+<span class="var">e</span> = <span class="kw">None</span>
+
+<span class="builtin">print</span>(<span class="builtin">type</span>(<span class="var">a</span>))  <span class="cm"># &lt;class 'int'&gt;</span>
+<span class="builtin">print</span>(<span class="builtin">type</span>(<span class="var">b</span>))  <span class="cm"># &lt;class 'float'&gt;</span>
+<span class="builtin">print</span>(<span class="builtin">type</span>(<span class="var">c</span>))  <span class="cm"># &lt;class 'str'&gt;</span>
+<span class="builtin">print</span>(<span class="builtin">type</span>(<span class="var">d</span>))  <span class="cm"># &lt;class 'bool'&gt;</span></pre>
+      </div>
+
+      <h3 class="sub-h">Преобразование типов</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">число_строка</span> = <span class="str">"42"</span>
+<span class="var">число</span> = <span class="builtin">int</span>(<span class="var">число_строка</span>)   <span class="cm"># "42" → 42</span>
+<span class="var">дробь</span> = <span class="builtin">float</span>(<span class="var">число</span>)        <span class="cm"># 42 → 42.0</span>
+<span class="var">обратно</span> = <span class="builtin">str</span>(<span class="var">число</span>)         <span class="cm"># 42 → "42"</span>
+
+<span class="builtin">print</span>(<span class="var">число</span> + <span class="num">8</span>)              <span class="cm"># 50</span></pre>
+      </div>
+
+      <!-- ОПЕРАТОРЫ -->
+      <h2 class="section-h" id="operatory">Операторы</h2>
+
+      <h3 class="sub-h">Арифметические операторы</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">a</span>, <span class="var">b</span> = <span class="num">10</span>, <span class="num">3</span>
+
+<span class="builtin">print</span>(<span class="var">a</span> + <span class="var">b</span>)   <span class="cm"># 13  — сложение</span>
+<span class="builtin">print</span>(<span class="var">a</span> - <span class="var">b</span>)   <span class="cm"># 7   — вычитание</span>
+<span class="builtin">print</span>(<span class="var">a</span> * <span class="var">b</span>)   <span class="cm"># 30  — умножение</span>
+<span class="builtin">print</span>(<span class="var">a</span> / <span class="var">b</span>)   <span class="cm"># 3.33 — деление</span>
+<span class="builtin">print</span>(<span class="var">a</span> // <span class="var">b</span>)  <span class="cm"># 3   — целочисленное деление</span>
+<span class="builtin">print</span>(<span class="var">a</span> % <span class="var">b</span>)   <span class="cm"># 1   — остаток от деления</span>
+<span class="builtin">print</span>(<span class="var">a</span> ** <span class="var">b</span>)  <span class="cm"># 1000 — возведение в степень</span></pre>
+      </div>
+
+      <h3 class="sub-h">Операторы сравнения</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="builtin">print</span>(<span class="num">5</span> == <span class="num">5</span>)   <span class="cm"># True  — равно</span>
+<span class="builtin">print</span>(<span class="num">5</span> != <span class="num">3</span>)   <span class="cm"># True  — не равно</span>
+<span class="builtin">print</span>(<span class="num">5</span> > <span class="num">3</span>)    <span class="cm"># True  — больше</span>
+<span class="builtin">print</span>(<span class="num">5</span> < <span class="num">3</span>)    <span class="cm"># False — меньше</span>
+<span class="builtin">print</span>(<span class="num">5</span> >= <span class="num">5</span>)   <span class="cm"># True  — больше или равно</span>
+<span class="builtin">print</span>(<span class="num">5</span> <= <span class="num">4</span>)   <span class="cm"># False — меньше или равно</span></pre>
+      </div>
+
+      <h3 class="sub-h">Логические операторы</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">x</span> = <span class="num">7</span>
+
+<span class="builtin">print</span>(<span class="var">x</span> > <span class="num">5</span> <span class="kw">and</span> <span class="var">x</span> < <span class="num">10</span>)   <span class="cm"># True  — оба условия верны</span>
+<span class="builtin">print</span>(<span class="var">x</span> < <span class="num">5</span> <span class="kw">or</span> <span class="var">x</span> > <span class="num">6</span>)    <span class="cm"># True  — хотя бы одно верно</span>
+<span class="builtin">print</span>(<span class="kw">not</span> (<span class="var">x</span> > <span class="num">5</span>))          <span class="cm"># False — инверсия</span></pre>
+      </div>
+
+      <!-- СТРОКИ -->
+      <h2 class="section-h" id="stroki">Строки</h2>
+      <p>
+        Строки (<code class="inline">str</code>) — один из самых часто используемых типов данных.
+        Строки можно заключать в одинарные или двойные кавычки.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">имя</span> = <span class="str">"Нурмухаммед"</span>
+<span class="var">специальность</span> = <span class="str">'Бизнес-информатика'</span>
+
+<span class="cm"># Конкатенация (склеивание)</span>
+<span class="builtin">print</span>(<span class="var">имя</span> + <span class="str">" — "</span> + <span class="var">специальность</span>)
+
+<span class="cm"># f-строки (удобный способ вставки переменных)</span>
+<span class="var">группа</span> = <span class="str">"БИ-3-22"</span>
+<span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Студент {имя}, группа {группа}"</span>)
+
+<span class="cm"># Длина строки</span>
+<span class="builtin">print</span>(<span class="builtin">len</span>(<span class="var">имя</span>))  <span class="cm"># 11</span>
+
+<span class="cm"># Методы строк</span>
+<span class="builtin">print</span>(<span class="var">имя</span>.<span class="fn">upper</span>())       <span class="cm"># НУРМУХАММЕД</span>
+<span class="builtin">print</span>(<span class="var">имя</span>.<span class="fn">lower</span>())       <span class="cm"># нурмухаммед</span>
+<span class="builtin">print</span>(<span class="var">имя</span>.<span class="fn">replace</span>(<span class="str">"е"</span>, <span class="str">"Е"</span>))  <span class="cm"># НурмухаммЕд</span></pre>
+      </div>
+
+      <!-- ВВОД И ВЫВОД -->
+      <h2 class="section-h" id="vvod-vyvod">Ввод и вывод</h2>
+
+      <h3 class="sub-h">Функция print()</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="builtin">print</span>(<span class="str">"Привет!"</span>)                        <span class="cm"># Привет!</span>
+<span class="builtin">print</span>(<span class="str">"a ="</span>, <span class="num">42</span>)                       <span class="cm"># a = 42</span>
+<span class="builtin">print</span>(<span class="str">"x"</span>, <span class="str">"y"</span>, <span class="str">"z"</span>, sep=<span class="str">"-"</span>)         <span class="cm"># x-y-z</span>
+<span class="builtin">print</span>(<span class="str">"Строка 1"</span>, end=<span class="str">" | "</span>)
+<span class="builtin">print</span>(<span class="str">"Строка 2"</span>)                       <span class="cm"># Строка 1 | Строка 2</span></pre>
+      </div>
+
+      <h3 class="sub-h">Функция input()</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">имя</span> = <span class="builtin">input</span>(<span class="str">"Введите ваше имя: "</span>)
+<span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Привет, {имя}!"</span>)
+
+<span class="cm"># input() всегда возвращает строку</span>
+<span class="cm"># Для числа нужно конвертировать:</span>
+<span class="var">возраст</span> = <span class="builtin">int</span>(<span class="builtin">input</span>(<span class="str">"Ваш возраст: "</span>))
+<span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Через 5 лет вам будет {возраст + 5}"</span>)</pre>
+      </div>
+
+      <!-- КОММЕНТАРИИ -->
+      <h2 class="section-h" id="kommentarii">Комментарии</h2>
+      <p>
+        Комментарии — это пояснения в коде, которые Python игнорирует при выполнении.
+        Они нужны для объяснения логики кода другим разработчикам (и самому себе в будущем).
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="cm"># Однострочный комментарий</span>
+<span class="var">x</span> = <span class="num">42</span>  <span class="cm"># комментарий в конце строки</span>
+
+<span class="str">"""
+Многострочный комментарий
+(или строка документации — docstring)
+Используется для описания функций и модулей
+"""</span></pre>
+      </div>
+
+      <div class="try-block">
+        <div class="try-header">
+          <div class="try-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Попробуй сам
+          </div>
+          <button class="try-run-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Запустить
+          </button>
+        </div>
+        <div class="try-editor">
+          <textarea>имя = "Нурмухаммед"
+возраст = 20
+университет = "КГТУ им. И. Раззакова"
+
+print(f"Имя: {имя}")
+print(f"Возраст: {возраст}")
+print(f"Университет: {университет}")</textarea>
+        </div>
+        <div class="try-output">
+          <div class="try-output-label">Вывод</div>
+          <div class="try-output-box"></div>
+        </div>
+      </div>
+
+      <div class="page-nav">
+        <a href="nachalo.html" class="page-nav-btn">
+          <span class="page-nav-label">Предыдущий модуль</span>
+          <span class="page-nav-title">Начало работы с Python</span>
+        </a>
+        <a href="usloviya.html" class="page-nav-btn next">
+          <span class="page-nav-label">Следующий модуль</span>
+          <span class="page-nav-title">Условия и циклы</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

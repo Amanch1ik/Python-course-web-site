@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Введение в Python — Электронный курс</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+      <path d="M12 2C9.5 2 8 3.5 8 5v2h4v1H6C3.8 8 2 9.8 2 12s1.8 4 4 4h1v-2H6c-1.1 0-2-.9-2-2s.9-2 2-2h6V8h4V5c0-1.5-1.5-3-4-3z" fill="#3776AB"/>
+      <path d="M12 22c2.5 0 4-1.5 4-3v-2h-4v-1h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-1v2h1c1.1 0 2 .9 2 2s-.9 2-2 2h-6v2H8v3c0 1.5 1.5 3 4 3z" fill="#FFD43B"/>
+      <circle cx="9.5" cy="5.5" r="1" fill="#FFD43B"/>
+      <circle cx="14.5" cy="18.5" r="1" fill="#3776AB"/>
+    </svg>
+    Python<span>Курс</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="vvedenie.html" class="active">Введение</a>
+    <a href="nachalo.html">Начало работы</a>
+    <a href="osnovy.html">Основы</a>
+    <a href="usloviya.html">Условия и циклы</a>
+    <a href="struktury.html">Структуры данных</a>
+    <a href="funkcii.html">Функции</a>
+    <a href="praktika.html">Практика</a>
+    <a href="kontakty.html">Контакты</a>
+  </div>
+  <div class="nav-module-btns">
+    <a href="index.html" class="nav-btn-ghost">← Главная</a>
+    <a href="nachalo.html" class="nav-btn">Следующий →</a>
+  </div>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Главная</a>
+  <a href="vvedenie.html" class="active">Введение в Python</a>
+  <a href="nachalo.html">Начало работы</a>
+  <a href="osnovy.html">Основы Python</a>
+  <a href="usloviya.html">Условия и циклы</a>
+  <a href="struktury.html">Структуры данных</a>
+  <a href="funkcii.html">Функции</a>
+  <a href="praktika.html">Практика и итог</a>
+  <a href="kontakty.html">Контакты</a>
+</div>
+
+<div class="course-layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">Программа курса</div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Модуль 1</div>
+      <a href="vvedenie.html" class="sidebar-link active">
+        <span class="sidebar-link-icon">01</span> Введение в Python
+      </a>
+      <a href="vvedenie.html#chto-takoe" class="sidebar-link">
+        <span class="sidebar-link-icon">—</span> Что такое Python
+      </a>
+      <a href="vvedenie.html#historia" class="sidebar-link">
+        <span class="sidebar-link-icon">—</span> История языка
+      </a>
+      <a href="vvedenie.html#primenenie" class="sidebar-link">
+        <span class="sidebar-link-icon">—</span> Где применяется
+      </a>
+      <a href="vvedenie.html#preimushhestva" class="sidebar-link">
+        <span class="sidebar-link-icon">—</span> Преимущества
+      </a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Другие модули</div>
+      <a href="nachalo.html" class="sidebar-link"><span class="sidebar-link-icon">02</span> Начало работы</a>
+      <a href="osnovy.html" class="sidebar-link"><span class="sidebar-link-icon">03</span> Основы Python</a>
+      <a href="usloviya.html" class="sidebar-link"><span class="sidebar-link-icon">04</span> Условия и циклы</a>
+      <a href="struktury.html" class="sidebar-link"><span class="sidebar-link-icon">05</span> Структуры данных</a>
+      <a href="funkcii.html" class="sidebar-link"><span class="sidebar-link-icon">06</span> Функции</a>
+      <a href="praktika.html" class="sidebar-link"><span class="sidebar-link-icon">07</span> Практика и итог</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="course-main">
+    <div class="course-content">
+
+      <div class="page-header">
+        <div class="page-label">Модуль 01</div>
+        <h1 class="page-title">Введение в <span>Python</span></h1>
+        <p class="page-desc">Познакомьтесь с языком программирования Python — узнайте его историю, особенности и области применения.</p>
+      </div>
+
+      <!-- ЧТО ТАКОЕ PYTHON -->
+      <h2 class="section-h" id="chto-takoe">Что такое Python</h2>
+      <p>
+        <strong>Python</strong> — это высокоуровневый язык программирования общего назначения с динамической типизацией и автоматическим управлением памятью.
+        Он разработан с упором на читаемость кода, поэтому программы на Python выглядят почти как обычный текст.
+      </p>
+      <p>
+        Python является <strong>интерпретируемым</strong> языком: это означает, что код выполняется строка за строкой
+        без предварительной компиляции в машинный код. Это делает разработку быстрой и удобной.
+      </p>
+      <div class="info-box">
+        <strong>Ключевая особенность:</strong> Python придерживается принципа «читаемость важнее краткости».
+        Код на Python понятен даже тем, кто его не писал.
+      </div>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Копировать
+          </button>
+        </div>
+        <pre class="code"><span class="cm"># Python — простой и читаемый язык</span>
+<span class="cm"># Пример: вычислить сумму чисел от 1 до 10</span>
+
+<span class="var">сумма</span> = <span class="builtin">sum</span>(<span class="builtin">range</span>(<span class="num">1</span>, <span class="num">11</span>))
+<span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Сумма от 1 до 10 = {сумма}"</span>)
+
+<span class="cm"># Вывод: Сумма от 1 до 10 = 55</span></pre>
+      </div>
+
+      <!-- ИСТОРИЯ -->
+      <h2 class="section-h" id="historia">История языка</h2>
+      <p>
+        Python создал <strong>Гвидо ван Россум</strong> (нидерл. Guido van Rossum) в конце 1980-х годов.
+        Работая в Нидерландах, он хотел создать язык, который был бы мощнее языка ABC, но при этом простым и понятным.
+      </p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Год</th>
+              <th>Событие</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1989</td>
+              <td>Гвидо ван Россум начинает разработку Python как хобби-проект</td>
+            </tr>
+            <tr>
+              <td>1991</td>
+              <td>Выпущена первая версия Python 0.9.0 — начало публичной истории</td>
+            </tr>
+            <tr>
+              <td>1994</td>
+              <td>Выход Python 1.0 — добавлены lambda, map, filter, reduce</td>
+            </tr>
+            <tr>
+              <td>2000</td>
+              <td>Python 2.0 — добавлена сборка мусора, поддержка Unicode</td>
+            </tr>
+            <tr>
+              <td>2008</td>
+              <td>Python 3.0 — крупное обновление с несовместимостью с Python 2</td>
+            </tr>
+            <tr>
+              <td>2020</td>
+              <td>Официальное завершение поддержки Python 2. Только Python 3</td>
+            </tr>
+            <tr>
+              <td>2024–2025</td>
+              <td>Python стабильно занимает 1-е место по индексу TIOBE</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="warn-box">
+        <strong>Важно:</strong> сегодня используется только <strong>Python 3</strong>.
+        Python 2 устарел и не поддерживается с января 2020 года. Все примеры в этом курсе написаны на Python 3.
+      </div>
+
+      <!-- ГДЕ ПРИМЕНЯЕТСЯ -->
+      <h2 class="section-h" id="primenenie">Где применяется Python</h2>
+      <p>Python — один из самых универсальных языков в мире. Его используют в самых разных областях:</p>
+
+      <h3 class="sub-h">Веб-разработка</h3>
+      <p>
+        Такие фреймворки, как <strong>Django</strong> и <strong>Flask</strong>, позволяют создавать
+        полноценные веб-приложения. На Python работают крупные сервисы — Instagram, Pinterest, Disqus.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python — Flask</span>
+          <button class="copy-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Копировать
+          </button>
+        </div>
+        <pre class="code"><span class="kw">from</span> <span class="var">flask</span> <span class="kw">import</span> <span class="var">Flask</span>
+
+<span class="var">app</span> = <span class="var">Flask</span>(<span class="var">__name__</span>)
+
+<span class="fn">@app</span>.<span class="fn">route</span>(<span class="str">'/'</span>)
+<span class="kw">def</span> <span class="fn">главная</span>():
+    <span class="kw">return</span> <span class="str">"Привет от Python-сервера!"</span>
+
+<span class="cm"># Простейший веб-сервер готов за 7 строк</span></pre>
+      </div>
+
+      <h3 class="sub-h">Анализ данных и машинное обучение</h3>
+      <p>
+        Python — стандарт в Data Science. Библиотеки <strong>NumPy</strong>, <strong>pandas</strong>,
+        <strong>scikit-learn</strong> и <strong>TensorFlow</strong> сделали его основным языком
+        для специалистов по данным и ML-инженеров.
+      </p>
+
+      <h3 class="sub-h">Автоматизация</h3>
+      <p>
+        Python отлично подходит для автоматизации рутинных задач: работы с файлами, парсинга сайтов,
+        отправки почты, взаимодействия с API. Это экономит часы работы.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python — Автоматизация</span>
+          <button class="copy-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Копировать
+          </button>
+        </div>
+        <pre class="code"><span class="kw">import</span> <span class="var">os</span>
+
+<span class="cm"># Переименовать все .txt файлы в папке</span>
+<span class="kw">for</span> <span class="var">имя_файла</span> <span class="kw">in</span> <span class="var">os</span>.<span class="fn">listdir</span>(<span class="str">"."</span>):
+    <span class="kw">if</span> <span class="var">имя_файла</span>.<span class="fn">endswith</span>(<span class="str">".txt"</span>):
+        <span class="var">новое_имя</span> = <span class="str">"backup_"</span> + <span class="var">имя_файла</span>
+        <span class="var">os</span>.<span class="fn">rename</span>(<span class="var">имя_файла</span>, <span class="var">новое_имя</span>)
+        <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Переименовано: {имя_файла} → {новое_имя}"</span>)</pre>
+      </div>
+
+      <h3 class="sub-h">Научные вычисления</h3>
+      <p>
+        Python используется в NASA, CERN и других научных организациях для моделирования,
+        численных расчётов и визуализации данных.
+      </p>
+
+      <!-- ПРЕИМУЩЕСТВА -->
+      <h2 class="section-h" id="preimushhestva">Преимущества Python</h2>
+
+      <h3 class="sub-h">Простой и читаемый синтаксис</h3>
+      <p>
+        Синтаксис Python напоминает псевдокод. Отступы вместо фигурных скобок делают код
+        аккуратным и единообразным. Сравните Python с C++:
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Сравнение</span>
+          <button class="copy-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Копировать
+          </button>
+        </div>
+        <pre class="code"><span class="cm"># Python — "Привет, мир!"</span>
+<span class="builtin">print</span>(<span class="str">"Привет, мир!"</span>)
+
+<span class="cm"># C++ — то же самое</span>
+<span class="cm"># #include &lt;iostream&gt;</span>
+<span class="cm"># int main() {</span>
+<span class="cm">#     std::cout &lt;&lt; "Привет, мир!" &lt;&lt; std::endl;</span>
+<span class="cm">#     return 0;</span>
+<span class="cm"># }</span></pre>
+      </div>
+
+      <h3 class="sub-h">Кроссплатформенность</h3>
+      <p>
+        Код Python работает на Windows, macOS, Linux и даже Android без изменений.
+        Достаточно установить интерпретатор Python на любую платформу.
+      </p>
+
+      <h3 class="sub-h">Огромная экосистема библиотек</h3>
+      <p>
+        Репозиторий <strong>PyPI</strong> содержит более 500 000 пакетов. Для любой задачи
+        скорее всего уже существует готовая библиотека — не нужно писать всё с нуля.
+      </p>
+
+      <ul class="list">
+        <li><strong>pandas</strong> — анализ и обработка данных</li>
+        <li><strong>requests</strong> — HTTP-запросы к API</li>
+        <li><strong>matplotlib</strong> — визуализация данных</li>
+        <li><strong>Pillow</strong> — обработка изображений</li>
+        <li><strong>SQLAlchemy</strong> — работа с базами данных</li>
+        <li><strong>pytest</strong> — автоматизированное тестирование</li>
+      </ul>
+
+      <h3 class="sub-h">Большое сообщество</h3>
+      <p>
+        Python — один из самых популярных языков в мире. Это значит, что на любой вопрос
+        найдётся ответ на Stack Overflow, GitHub или в официальной документации.
+        Обучающих материалов на любом языке — тысячи.
+      </p>
+
+      <div class="info-box">
+        <strong>Итог:</strong> Python — идеальный первый язык программирования благодаря чистому синтаксису,
+        и одновременно мощный инструмент профессионального разработчика. Именно поэтому он занимает
+        первое место по популярности в индексе TIOBE уже несколько лет подряд.
+      </div>
+
+      <!-- TRY IT -->
+      <div class="try-block">
+        <div class="try-header">
+          <div class="try-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Попробуй сам
+          </div>
+          <button class="try-run-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Запустить
+          </button>
+        </div>
+        <div class="try-editor">
+          <textarea>print("Привет, Python!")
+print("Мой первый код работает!")</textarea>
+        </div>
+        <div class="try-output">
+          <div class="try-output-label">Вывод</div>
+          <div class="try-output-box"></div>
+        </div>
+      </div>
+
+      <!-- PAGE NAV -->
+      <div class="page-nav">
+        <a href="index.html" class="page-nav-btn">
+          <span class="page-nav-label">Назад</span>
+          <span class="page-nav-title">Главная страница</span>
+        </a>
+        <a href="nachalo.html" class="page-nav-btn next">
+          <span class="page-nav-label">Следующий модуль</span>
+          <span class="page-nav-title">Начало работы с Python</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

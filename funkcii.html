@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Функции — Электронный курс Python</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+      <path d="M12 2C9.5 2 8 3.5 8 5v2h4v1H6C3.8 8 2 9.8 2 12s1.8 4 4 4h1v-2H6c-1.1 0-2-.9-2-2s.9-2 2-2h6V8h4V5c0-1.5-1.5-3-4-3z" fill="#3776AB"/>
+      <path d="M12 22c2.5 0 4-1.5 4-3v-2h-4v-1h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-1v2h1c1.1 0 2 .9 2 2s-.9 2-2 2h-6v2H8v3c0 1.5 1.5 3 4 3z" fill="#FFD43B"/>
+      <circle cx="9.5" cy="5.5" r="1" fill="#FFD43B"/>
+      <circle cx="14.5" cy="18.5" r="1" fill="#3776AB"/>
+    </svg>
+    Python<span>Курс</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="vvedenie.html">Введение</a>
+    <a href="nachalo.html">Начало работы</a>
+    <a href="osnovy.html">Основы</a>
+    <a href="usloviya.html">Условия и циклы</a>
+    <a href="struktury.html">Структуры данных</a>
+    <a href="funkcii.html" class="active">Функции</a>
+    <a href="praktika.html">Практика</a>
+    <a href="kontakty.html">Контакты</a>
+  </div>
+  <div class="nav-module-btns">
+    <a href="struktury.html" class="nav-btn-ghost">← Назад</a>
+    <a href="praktika.html" class="nav-btn">Следующий →</a>
+  </div>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Главная</a>
+  <a href="vvedenie.html">Введение в Python</a>
+  <a href="nachalo.html">Начало работы</a>
+  <a href="osnovy.html">Основы Python</a>
+  <a href="usloviya.html">Условия и циклы</a>
+  <a href="struktury.html">Структуры данных</a>
+  <a href="funkcii.html" class="active">Функции</a>
+  <a href="praktika.html">Практика и итог</a>
+  <a href="kontakty.html">Контакты</a>
+</div>
+
+<div class="course-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">Программа курса</div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Модуль 6</div>
+      <a href="funkcii.html" class="sidebar-link active"><span class="sidebar-link-icon">06</span> Функции</a>
+      <a href="funkcii.html#opredelenie" class="sidebar-link"><span class="sidebar-link-icon">—</span> Определение функции</a>
+      <a href="funkcii.html#parametry" class="sidebar-link"><span class="sidebar-link-icon">—</span> Параметры</a>
+      <a href="funkcii.html#return" class="sidebar-link"><span class="sidebar-link-icon">—</span> Возврат значения</a>
+      <a href="funkcii.html#lambda" class="sidebar-link"><span class="sidebar-link-icon">—</span> Lambda-функции</a>
+      <a href="funkcii.html#vstroennye" class="sidebar-link"><span class="sidebar-link-icon">—</span> Встроенные функции</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Другие модули</div>
+      <a href="vvedenie.html" class="sidebar-link"><span class="sidebar-link-icon">01</span> Введение</a>
+      <a href="nachalo.html" class="sidebar-link"><span class="sidebar-link-icon">02</span> Начало работы</a>
+      <a href="osnovy.html" class="sidebar-link"><span class="sidebar-link-icon">03</span> Основы Python</a>
+      <a href="usloviya.html" class="sidebar-link"><span class="sidebar-link-icon">04</span> Условия и циклы</a>
+      <a href="struktury.html" class="sidebar-link"><span class="sidebar-link-icon">05</span> Структуры данных</a>
+      <a href="praktika.html" class="sidebar-link"><span class="sidebar-link-icon">07</span> Практика и итог</a>
+    </div>
+  </aside>
+
+  <main class="course-main">
+    <div class="course-content">
+
+      <div class="page-header">
+        <div class="page-label">Модуль 06</div>
+        <h1 class="page-title"><span>Функции</span> в Python</h1>
+        <p class="page-desc">Функции позволяют разбить программу на переиспользуемые блоки — это основа структурированного кода.</p>
+      </div>
+
+      <h2 class="section-h" id="opredelenie">Определение функции</h2>
+      <p>
+        Функция — именованный блок кода, который можно вызвать в любом месте программы.
+        Ключевое слово <code class="inline">def</code> объявляет функцию. Тело функции выделяется отступом.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="cm"># Объявление функции</span>
+<span class="kw">def</span> <span class="fn">поприветствовать</span>():
+    <span class="builtin">print</span>(<span class="str">"Привет! Добро пожаловать в курс Python."</span>)
+
+<span class="cm"># Вызов функции</span>
+<span class="fn">поприветствовать</span>()   <span class="cm"># Привет! Добро пожаловать в курс Python.</span>
+<span class="fn">поприветствовать</span>()   <span class="cm"># можно вызывать сколько угодно раз</span></pre>
+      </div>
+
+      <div class="info-box">
+        <strong>Зачем нужны функции:</strong> без функций одинаковый код пришлось бы копировать в разных
+        местах. Функции позволяют написать логику один раз и переиспользовать её — это принцип DRY
+        (Don't Repeat Yourself — «не повторяйся»).
+      </div>
+
+      <h2 class="section-h" id="parametry">Параметры и аргументы</h2>
+      <p>
+        Параметры — это переменные в объявлении функции. Аргументы — конкретные значения,
+        которые передаются при вызове.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="cm"># имя — параметр</span>
+<span class="kw">def</span> <span class="fn">поприветствовать</span>(<span class="var">имя</span>):
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Привет, {имя}!"</span>)
+
+<span class="fn">поприветствовать</span>(<span class="str">"Нурмухаммед"</span>)   <span class="cm"># Привет, Нурмухаммед!</span>
+<span class="fn">поприветствовать</span>(<span class="str">"Айгерим"</span>)      <span class="cm"># Привет, Айгерим!</span>
+
+<span class="cm"># Несколько параметров</span>
+<span class="kw">def</span> <span class="fn">сложить</span>(<span class="var">a</span>, <span class="var">b</span>):
+    <span class="builtin">print</span>(<span class="var">a</span> + <span class="var">b</span>)
+
+<span class="fn">сложить</span>(<span class="num">3</span>, <span class="num">5</span>)    <span class="cm"># 8</span>
+<span class="fn">сложить</span>(<span class="num">10</span>, <span class="num">20</span>)  <span class="cm"># 30</span></pre>
+      </div>
+
+      <h3 class="sub-h">Параметры по умолчанию</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="kw">def</span> <span class="fn">поздороваться</span>(<span class="var">имя</span>, <span class="var">приветствие</span>=<span class="str">"Привет"</span>):
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"{приветствие}, {имя}!"</span>)
+
+<span class="fn">поздороваться</span>(<span class="str">"Нурмухаммед"</span>)             <span class="cm"># Привет, Нурмухаммед!</span>
+<span class="fn">поздороваться</span>(<span class="str">"Нурмухаммед"</span>, <span class="str">"Салам"</span>)   <span class="cm"># Салам, Нурмухаммед!</span></pre>
+      </div>
+
+      <h2 class="section-h" id="return">Возврат значения — return</h2>
+      <p>
+        Оператор <code class="inline">return</code> завершает выполнение функции и возвращает значение.
+        Без <code class="inline">return</code> функция возвращает <code class="inline">None</code>.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="kw">def</span> <span class="fn">площадь_прямоугольника</span>(<span class="var">ширина</span>, <span class="var">высота</span>):
+    <span class="var">площадь</span> = <span class="var">ширина</span> * <span class="var">высота</span>
+    <span class="kw">return</span> <span class="var">площадь</span>
+
+<span class="var">результат</span> = <span class="fn">площадь_прямоугольника</span>(<span class="num">5</span>, <span class="num">3</span>)
+<span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Площадь: {результат}"</span>)    <span class="cm"># Площадь: 15</span>
+
+<span class="cm"># Возврат нескольких значений</span>
+<span class="kw">def</span> <span class="fn">мин_макс</span>(<span class="var">числа</span>):
+    <span class="kw">return</span> <span class="builtin">min</span>(<span class="var">числа</span>), <span class="builtin">max</span>(<span class="var">числа</span>)
+
+<span class="var">минимум</span>, <span class="var">максимум</span> = <span class="fn">мин_макс</span>([<span class="num">3</span>, <span class="num">1</span>, <span class="num">7</span>, <span class="num">2</span>, <span class="num">9</span>])
+<span class="builtin">print</span>(<span class="var">минимум</span>, <span class="var">максимум</span>)          <span class="cm"># 1 9</span></pre>
+      </div>
+
+      <h2 class="section-h" id="lambda">Lambda-функции</h2>
+      <p>
+        <strong>Lambda</strong> — однострочная анонимная функция. Используется там, где нужна
+        простая функция без официального объявления через <code class="inline">def</code>.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="cm"># Обычная функция</span>
+<span class="kw">def</span> <span class="fn">удвоить</span>(<span class="var">x</span>):
+    <span class="kw">return</span> <span class="var">x</span> * <span class="num">2</span>
+
+<span class="cm"># То же самое через lambda</span>
+<span class="var">удвоить</span> = <span class="kw">lambda</span> <span class="var">x</span>: <span class="var">x</span> * <span class="num">2</span>
+<span class="builtin">print</span>(<span class="fn">удвоить</span>(<span class="num">5</span>))      <span class="cm"># 10</span>
+
+<span class="cm"># Lambda в sorted() для сортировки по ключу</span>
+<span class="var">студенты</span> = [
+    {<span class="str">"имя"</span>: <span class="str">"Айгерим"</span>, <span class="str">"балл"</span>: <span class="num">85</span>},
+    {<span class="str">"имя"</span>: <span class="str">"Нурмухаммед"</span>, <span class="str">"балл"</span>: <span class="num">92</span>},
+    {<span class="str">"имя"</span>: <span class="str">"Даниял"</span>, <span class="str">"балл"</span>: <span class="num">78</span>}
+]
+<span class="var">по_баллу</span> = <span class="builtin">sorted</span>(<span class="var">студенты</span>, key=<span class="kw">lambda</span> <span class="var">s</span>: <span class="var">s</span>[<span class="str">"балл"</span>], reverse=<span class="kw">True</span>)
+<span class="kw">for</span> <span class="var">с</span> <span class="kw">in</span> <span class="var">по_баллу</span>:
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"{с['имя']}: {с['балл']}"</span>)</pre>
+      </div>
+
+      <h2 class="section-h" id="vstroennye">Полезные встроенные функции</h2>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">числа</span> = [<span class="num">4</span>, <span class="num">7</span>, <span class="num">2</span>, <span class="num">9</span>, <span class="num">1</span>]
+
+<span class="builtin">print</span>(<span class="builtin">len</span>(<span class="var">числа</span>))         <span class="cm"># 5       — длина</span>
+<span class="builtin">print</span>(<span class="builtin">sum</span>(<span class="var">числа</span>))         <span class="cm"># 23      — сумма</span>
+<span class="builtin">print</span>(<span class="builtin">min</span>(<span class="var">числа</span>))         <span class="cm"># 1       — минимум</span>
+<span class="builtin">print</span>(<span class="builtin">max</span>(<span class="var">числа</span>))         <span class="cm"># 9       — максимум</span>
+<span class="builtin">print</span>(<span class="builtin">sorted</span>(<span class="var">числа</span>))      <span class="cm"># [1,2,4,7,9] — сортировка</span>
+<span class="builtin">print</span>(<span class="builtin">abs</span>(-<span class="num">15</span>))           <span class="cm"># 15      — модуль</span>
+<span class="builtin">print</span>(<span class="builtin">round</span>(<span class="num">3.14159</span>, <span class="num">2</span>))  <span class="cm"># 3.14    — округление</span>
+<span class="builtin">print</span>(<span class="builtin">range</span>(<span class="num">5</span>))           <span class="cm"># range(0,5)</span>
+<span class="builtin">print</span>(<span class="builtin">list</span>(<span class="builtin">range</span>(<span class="num">5</span>)))     <span class="cm"># [0,1,2,3,4]</span></pre>
+      </div>
+
+      <div class="try-block">
+        <div class="try-header">
+          <div class="try-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Попробуй сам — напиши свою функцию
+          </div>
+          <button class="try-run-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Запустить
+          </button>
+        </div>
+        <div class="try-editor">
+          <textarea>def факториал(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * факториал(n - 1)
+
+for i in range(1, 8):
+    print(f"{i}! = {факториал(i)}")</textarea>
+        </div>
+        <div class="try-output">
+          <div class="try-output-label">Вывод</div>
+          <div class="try-output-box"></div>
+        </div>
+      </div>
+
+      <div class="page-nav">
+        <a href="struktury.html" class="page-nav-btn">
+          <span class="page-nav-label">Предыдущий модуль</span>
+          <span class="page-nav-title">Структуры данных</span>
+        </a>
+        <a href="praktika.html" class="page-nav-btn next">
+          <span class="page-nav-label">Следующий модуль</span>
+          <span class="page-nav-title">Практика и итог</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

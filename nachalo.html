@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Начало работы с Python — Электронный курс</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+      <path d="M12 2C9.5 2 8 3.5 8 5v2h4v1H6C3.8 8 2 9.8 2 12s1.8 4 4 4h1v-2H6c-1.1 0-2-.9-2-2s.9-2 2-2h6V8h4V5c0-1.5-1.5-3-4-3z" fill="#3776AB"/>
+      <path d="M12 22c2.5 0 4-1.5 4-3v-2h-4v-1h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-1v2h1c1.1 0 2 .9 2 2s-.9 2-2 2h-6v2H8v3c0 1.5 1.5 3 4 3z" fill="#FFD43B"/>
+      <circle cx="9.5" cy="5.5" r="1" fill="#FFD43B"/>
+      <circle cx="14.5" cy="18.5" r="1" fill="#3776AB"/>
+    </svg>
+    Python<span>Курс</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="vvedenie.html">Введение</a>
+    <a href="nachalo.html" class="active">Начало работы</a>
+    <a href="osnovy.html">Основы</a>
+    <a href="usloviya.html">Условия и циклы</a>
+    <a href="struktury.html">Структуры данных</a>
+    <a href="funkcii.html">Функции</a>
+    <a href="praktika.html">Практика</a>
+    <a href="kontakty.html">Контакты</a>
+  </div>
+  <div class="nav-module-btns">
+    <a href="vvedenie.html" class="nav-btn-ghost">← Введение</a>
+    <a href="osnovy.html" class="nav-btn">Следующий →</a>
+  </div>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Главная</a>
+  <a href="vvedenie.html">Введение в Python</a>
+  <a href="nachalo.html" class="active">Начало работы</a>
+  <a href="osnovy.html">Основы Python</a>
+  <a href="usloviya.html">Условия и циклы</a>
+  <a href="struktury.html">Структуры данных</a>
+  <a href="funkcii.html">Функции</a>
+  <a href="praktika.html">Практика и итог</a>
+  <a href="kontakty.html">Контакты</a>
+</div>
+
+<div class="course-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">Программа курса</div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Модуль 2</div>
+      <a href="nachalo.html" class="sidebar-link active"><span class="sidebar-link-icon">02</span> Начало работы</a>
+      <a href="nachalo.html#ustanovka" class="sidebar-link"><span class="sidebar-link-icon">—</span> Установка Python</a>
+      <a href="nachalo.html#proverka" class="sidebar-link"><span class="sidebar-link-icon">—</span> Проверка версии</a>
+      <a href="nachalo.html#redaktor" class="sidebar-link"><span class="sidebar-link-icon">—</span> Среда разработки</a>
+      <a href="nachalo.html#perviy-kod" class="sidebar-link"><span class="sidebar-link-icon">—</span> Первая программа</a>
+      <a href="nachalo.html#zapusk" class="sidebar-link"><span class="sidebar-link-icon">—</span> Запуск файла</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Другие модули</div>
+      <a href="vvedenie.html" class="sidebar-link"><span class="sidebar-link-icon">01</span> Введение</a>
+      <a href="osnovy.html" class="sidebar-link"><span class="sidebar-link-icon">03</span> Основы Python</a>
+      <a href="usloviya.html" class="sidebar-link"><span class="sidebar-link-icon">04</span> Условия и циклы</a>
+      <a href="struktury.html" class="sidebar-link"><span class="sidebar-link-icon">05</span> Структуры данных</a>
+      <a href="funkcii.html" class="sidebar-link"><span class="sidebar-link-icon">06</span> Функции</a>
+      <a href="praktika.html" class="sidebar-link"><span class="sidebar-link-icon">07</span> Практика и итог</a>
+    </div>
+  </aside>
+
+  <main class="course-main">
+    <div class="course-content">
+
+      <div class="page-header">
+        <div class="page-label">Модуль 02</div>
+        <h1 class="page-title">Начало работы с <span>Python</span></h1>
+        <p class="page-desc">Установите Python, настройте среду разработки и напишите свою первую программу.</p>
+      </div>
+
+      <h2 class="section-h" id="ustanovka">Установка Python</h2>
+      <p>
+        Python можно бесплатно скачать с официального сайта <strong>python.org</strong>.
+        Установка занимает несколько минут и доступна для всех операционных систем.
+      </p>
+
+      <h3 class="sub-h">Windows</h3>
+      <ol class="list">
+        <li>Перейдите на <strong>python.org/downloads</strong></li>
+        <li>Нажмите кнопку <strong>Download Python 3.x.x</strong></li>
+        <li>Запустите скачанный файл <code class="inline">.exe</code></li>
+        <li><strong>Обязательно</strong> поставьте галочку <strong>Add Python to PATH</strong></li>
+        <li>Нажмите <strong>Install Now</strong> и дождитесь завершения</li>
+      </ol>
+
+      <div class="warn-box">
+        <strong>Важно:</strong> галочка <strong>Add Python to PATH</strong> — обязательна. Без неё
+        Python не будет доступен из командной строки.
+      </div>
+
+      <h3 class="sub-h">macOS</h3>
+      <p>
+        На macOS Python 3 можно установить через официальный установщик с <strong>python.org</strong>
+        или через менеджер пакетов <strong>Homebrew</strong>:
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Terminal</span>
+          <button class="copy-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Копировать
+          </button>
+        </div>
+        <pre class="code">brew install python3</pre>
+      </div>
+
+      <h2 class="section-h" id="proverka">Проверка установки</h2>
+      <p>После установки откройте <strong>командную строку</strong> (Windows) или <strong>терминал</strong> (macOS/Linux) и введите:</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Командная строка</span>
+          <button class="copy-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Копировать
+          </button>
+        </div>
+        <pre class="code">python --version</pre>
+      </div>
+
+      <p>Вы должны увидеть что-то вроде:</p>
+      <div class="code-block">
+        <div class="code-block-header"><span class="code-lang">Вывод</span></div>
+        <pre class="code" style="color:#56d364;">Python 3.12.3</pre>
+      </div>
+
+      <div class="info-box">
+        <strong>Интерактивный режим:</strong> введите просто <code class="inline">python</code> в терминале — откроется
+        интерактивная консоль Python (REPL), где можно вводить и сразу выполнять команды.
+        Для выхода введите <code class="inline">exit()</code>.
+      </div>
+
+      <h2 class="section-h" id="redaktor">Среда разработки (IDE)</h2>
+      <p>
+        Хотя Python-код можно писать в блокноте, для комфортной работы нужен редактор кода
+        с подсветкой синтаксиса, автодополнением и отладчиком.
+      </p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Редактор</th><th>Уровень</th><th>Особенности</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>VS Code</strong></td>
+              <td>Новичок / Профи</td>
+              <td>Бесплатный, расширяемый, плагин Python от Microsoft. Рекомендуется.</td>
+            </tr>
+            <tr>
+              <td><strong>PyCharm</strong></td>
+              <td>Профи</td>
+              <td>Мощная IDE специально для Python. Есть бесплатная Community-версия.</td>
+            </tr>
+            <tr>
+              <td><strong>IDLE</strong></td>
+              <td>Новичок</td>
+              <td>Встроен в Python. Подходит для первых шагов, но функционал ограничен.</td>
+            </tr>
+            <tr>
+              <td><strong>Jupyter Notebook</strong></td>
+              <td>Данные / Анализ</td>
+              <td>Идеален для анализа данных — можно запускать код блоками прямо в браузере.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub-h">Настройка VS Code для Python</h3>
+      <ol class="list">
+        <li>Скачайте VS Code с <strong>code.visualstudio.com</strong></li>
+        <li>Откройте VS Code и перейдите во вкладку <strong>Extensions</strong> (Ctrl+Shift+X)</li>
+        <li>Найдите и установите расширение <strong>Python</strong> от Microsoft</li>
+        <li>Нажмите <strong>Ctrl+Shift+P</strong>, введите <code class="inline">Python: Select Interpreter</code></li>
+        <li>Выберите установленный Python 3</li>
+      </ol>
+
+      <h2 class="section-h" id="perviy-kod">Первая программа</h2>
+      <p>
+        Создайте новый файл с расширением <code class="inline">.py</code> — например, <code class="inline">main.py</code> — и введите:
+      </p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">main.py</span>
+          <button class="copy-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Копировать
+          </button>
+        </div>
+        <pre class="code"><span class="builtin">print</span>(<span class="str">"Привет, мир!"</span>)</pre>
+      </div>
+
+      <p>
+        Это классическая программа «Hello, World!» — традиционное первое приложение
+        при изучении любого языка программирования.
+      </p>
+
+      <h2 class="section-h" id="zapusk">Запуск файла</h2>
+      <p>Есть два способа запустить Python-файл:</p>
+
+      <h3 class="sub-h">Способ 1 — через терминал</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Командная строка</span>
+          <button class="copy-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Копировать
+          </button>
+        </div>
+        <pre class="code">python main.py</pre>
+      </div>
+
+      <h3 class="sub-h">Способ 2 — в VS Code</h3>
+      <p>Нажмите кнопку <strong>Run</strong> (треугольник) в правом верхнем углу или клавишу <strong>F5</strong>.</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Вывод</span>
+        </div>
+        <pre class="code" style="color:#56d364;">Привет, мир!</pre>
+      </div>
+
+      <div class="try-block">
+        <div class="try-header">
+          <div class="try-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Попробуй сам — измени программу
+          </div>
+          <button class="try-run-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Запустить
+          </button>
+        </div>
+        <div class="try-editor">
+          <textarea>print("Привет, мир!")
+print("Меня зовут Python")
+print("Я изучаю программирование")</textarea>
+        </div>
+        <div class="try-output">
+          <div class="try-output-label">Вывод</div>
+          <div class="try-output-box"></div>
+        </div>
+      </div>
+
+      <div class="page-nav">
+        <a href="vvedenie.html" class="page-nav-btn">
+          <span class="page-nav-label">Предыдущий модуль</span>
+          <span class="page-nav-title">Введение в Python</span>
+        </a>
+        <a href="osnovy.html" class="page-nav-btn next">
+          <span class="page-nav-label">Следующий модуль</span>
+          <span class="page-nav-title">Основы Python</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

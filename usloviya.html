@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Условия и циклы — Электронный курс Python</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+      <path d="M12 2C9.5 2 8 3.5 8 5v2h4v1H6C3.8 8 2 9.8 2 12s1.8 4 4 4h1v-2H6c-1.1 0-2-.9-2-2s.9-2 2-2h6V8h4V5c0-1.5-1.5-3-4-3z" fill="#3776AB"/>
+      <path d="M12 22c2.5 0 4-1.5 4-3v-2h-4v-1h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-1v2h1c1.1 0 2 .9 2 2s-.9 2-2 2h-6v2H8v3c0 1.5 1.5 3 4 3z" fill="#FFD43B"/>
+      <circle cx="9.5" cy="5.5" r="1" fill="#FFD43B"/>
+      <circle cx="14.5" cy="18.5" r="1" fill="#3776AB"/>
+    </svg>
+    Python<span>Курс</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="vvedenie.html">Введение</a>
+    <a href="nachalo.html">Начало работы</a>
+    <a href="osnovy.html">Основы</a>
+    <a href="usloviya.html" class="active">Условия и циклы</a>
+    <a href="struktury.html">Структуры данных</a>
+    <a href="funkcii.html">Функции</a>
+    <a href="praktika.html">Практика</a>
+    <a href="kontakty.html">Контакты</a>
+  </div>
+  <div class="nav-module-btns">
+    <a href="osnovy.html" class="nav-btn-ghost">← Назад</a>
+    <a href="struktury.html" class="nav-btn">Следующий →</a>
+  </div>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Главная</a>
+  <a href="vvedenie.html">Введение в Python</a>
+  <a href="nachalo.html">Начало работы</a>
+  <a href="osnovy.html">Основы Python</a>
+  <a href="usloviya.html" class="active">Условия и циклы</a>
+  <a href="struktury.html">Структуры данных</a>
+  <a href="funkcii.html">Функции</a>
+  <a href="praktika.html">Практика и итог</a>
+  <a href="kontakty.html">Контакты</a>
+</div>
+
+<div class="course-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">Программа курса</div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Модуль 4</div>
+      <a href="usloviya.html" class="sidebar-link active"><span class="sidebar-link-icon">04</span> Условия и циклы</a>
+      <a href="usloviya.html#if" class="sidebar-link"><span class="sidebar-link-icon">—</span> Условие if</a>
+      <a href="usloviya.html#elif-else" class="sidebar-link"><span class="sidebar-link-icon">—</span> elif и else</a>
+      <a href="usloviya.html#for" class="sidebar-link"><span class="sidebar-link-icon">—</span> Цикл for</a>
+      <a href="usloviya.html#range" class="sidebar-link"><span class="sidebar-link-icon">—</span> Функция range()</a>
+      <a href="usloviya.html#while" class="sidebar-link"><span class="sidebar-link-icon">—</span> Цикл while</a>
+      <a href="usloviya.html#break-continue" class="sidebar-link"><span class="sidebar-link-icon">—</span> break и continue</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Другие модули</div>
+      <a href="vvedenie.html" class="sidebar-link"><span class="sidebar-link-icon">01</span> Введение</a>
+      <a href="nachalo.html" class="sidebar-link"><span class="sidebar-link-icon">02</span> Начало работы</a>
+      <a href="osnovy.html" class="sidebar-link"><span class="sidebar-link-icon">03</span> Основы Python</a>
+      <a href="struktury.html" class="sidebar-link"><span class="sidebar-link-icon">05</span> Структуры данных</a>
+      <a href="funkcii.html" class="sidebar-link"><span class="sidebar-link-icon">06</span> Функции</a>
+      <a href="praktika.html" class="sidebar-link"><span class="sidebar-link-icon">07</span> Практика и итог</a>
+    </div>
+  </aside>
+
+  <main class="course-main">
+    <div class="course-content">
+
+      <div class="page-header">
+        <div class="page-label">Модуль 04</div>
+        <h1 class="page-title">Условия и <span>циклы</span></h1>
+        <p class="page-desc">Управление потоком выполнения программы — ветвления if/elif/else и циклы for/while.</p>
+      </div>
+
+      <h2 class="section-h" id="if">Условный оператор if</h2>
+      <p>
+        Условный оператор <code class="inline">if</code> позволяет выполнять разные блоки кода
+        в зависимости от условия. Блок кода внутри <code class="inline">if</code> выполняется только
+        тогда, когда условие истинно (<code class="inline">True</code>).
+      </p>
+      <p>
+        <strong>Важно:</strong> в Python блоки кода выделяются <strong>отступами</strong> (4 пробела или 1 Tab).
+        Нет фигурных скобок — только отступы.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">температура</span> = <span class="num">25</span>
+
+<span class="kw">if</span> <span class="var">температура</span> > <span class="num">20</span>:
+    <span class="builtin">print</span>(<span class="str">"На улице тепло"</span>)   <span class="cm"># выполнится</span>
+
+<span class="kw">if</span> <span class="var">температура</span> > <span class="num">35</span>:
+    <span class="builtin">print</span>(<span class="str">"Очень жарко!"</span>)     <span class="cm"># не выполнится</span></pre>
+      </div>
+
+      <h2 class="section-h" id="elif-else">Операторы elif и else</h2>
+      <p>
+        <code class="inline">else</code> выполняется, если условие <code class="inline">if</code> ложно.
+        <code class="inline">elif</code> («else if») проверяет дополнительное условие.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">оценка</span> = <span class="num">85</span>
+
+<span class="kw">if</span> <span class="var">оценка</span> >= <span class="num">90</span>:
+    <span class="builtin">print</span>(<span class="str">"Отлично"</span>)
+<span class="kw">elif</span> <span class="var">оценка</span> >= <span class="num">75</span>:
+    <span class="builtin">print</span>(<span class="str">"Хорошо"</span>)         <span class="cm"># выполнится это</span>
+<span class="kw">elif</span> <span class="var">оценка</span> >= <span class="num">60</span>:
+    <span class="builtin">print</span>(<span class="str">"Удовлетворительно"</span>)
+<span class="kw">else</span>:
+    <span class="builtin">print</span>(<span class="str">"Неудовлетворительно"</span>)</pre>
+      </div>
+
+      <div class="info-box">
+        <strong>Тернарный оператор:</strong> короткая форма if/else в одну строку.
+      </div>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">возраст</span> = <span class="num">20</span>
+<span class="var">статус</span> = <span class="str">"совершеннолетний"</span> <span class="kw">if</span> <span class="var">возраст</span> >= <span class="num">18</span> <span class="kw">else</span> <span class="str">"несовершеннолетний"</span>
+<span class="builtin">print</span>(<span class="var">статус</span>)  <span class="cm"># совершеннолетний</span></pre>
+      </div>
+
+      <h2 class="section-h" id="for">Цикл for</h2>
+      <p>
+        Цикл <code class="inline">for</code> перебирает элементы последовательности (строки, списка, диапазона).
+        На каждой итерации переменная цикла принимает очередное значение.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="cm"># Перебор списка</span>
+<span class="var">фрукты</span> = [<span class="str">"яблоко"</span>, <span class="str">"банан"</span>, <span class="str">"апельсин"</span>]
+<span class="kw">for</span> <span class="var">фрукт</span> <span class="kw">in</span> <span class="var">фрукты</span>:
+    <span class="builtin">print</span>(<span class="var">фрукт</span>)
+<span class="cm"># яблоко</span>
+<span class="cm"># банан</span>
+<span class="cm"># апельсин</span>
+
+<span class="cm"># Перебор строки</span>
+<span class="kw">for</span> <span class="var">буква</span> <span class="kw">in</span> <span class="str">"Python"</span>:
+    <span class="builtin">print</span>(<span class="var">буква</span>, end=<span class="str">"-"</span>)
+<span class="cm"># P-y-t-h-o-n-</span></pre>
+      </div>
+
+      <h2 class="section-h" id="range">Функция range()</h2>
+      <p>
+        <code class="inline">range()</code> генерирует последовательность чисел. Часто используется
+        вместе с <code class="inline">for</code> для фиксированного количества повторений.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="cm"># range(стоп) — от 0 до стоп-1</span>
+<span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="builtin">range</span>(<span class="num">5</span>):
+    <span class="builtin">print</span>(<span class="var">i</span>)          <span class="cm"># 0 1 2 3 4</span>
+
+<span class="cm"># range(старт, стоп)</span>
+<span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="builtin">range</span>(<span class="num">1</span>, <span class="num">6</span>):
+    <span class="builtin">print</span>(<span class="var">i</span>)          <span class="cm"># 1 2 3 4 5</span>
+
+<span class="cm"># range(старт, стоп, шаг)</span>
+<span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="builtin">range</span>(<span class="num">0</span>, <span class="num">11</span>, <span class="num">2</span>):
+    <span class="builtin">print</span>(<span class="var">i</span>)          <span class="cm"># 0 2 4 6 8 10</span></pre>
+      </div>
+
+      <h2 class="section-h" id="while">Цикл while</h2>
+      <p>
+        Цикл <code class="inline">while</code> повторяет блок кода, пока условие остаётся истинным.
+        Используйте его, когда заранее неизвестно количество итераций.
+      </p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="var">счётчик</span> = <span class="num">0</span>
+
+<span class="kw">while</span> <span class="var">счётчик</span> < <span class="num">5</span>:
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Итерация {счётчик}"</span>)
+    <span class="var">счётчик</span> += <span class="num">1</span>
+
+<span class="cm"># Итерация 0</span>
+<span class="cm"># Итерация 1</span>
+<span class="cm"># ...до Итерация 4</span></pre>
+      </div>
+
+      <div class="warn-box">
+        <strong>Бесконечный цикл:</strong> если условие <code class="inline">while</code> никогда не станет ложным,
+        программа зависнет. Убедитесь, что переменная условия изменяется в теле цикла.
+      </div>
+
+      <h2 class="section-h" id="break-continue">Операторы break и continue</h2>
+
+      <h3 class="sub-h">break — выход из цикла</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="builtin">range</span>(<span class="num">10</span>):
+    <span class="kw">if</span> <span class="var">i</span> == <span class="num">5</span>:
+        <span class="kw">break</span>       <span class="cm"># остановить цикл при i=5</span>
+    <span class="builtin">print</span>(<span class="var">i</span>)
+<span class="cm"># Выведет: 0 1 2 3 4</span></pre>
+      </div>
+
+      <h3 class="sub-h">continue — пропустить итерацию</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">Python</span>
+          <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
+        </div>
+        <pre class="code"><span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="builtin">range</span>(<span class="num">6</span>):
+    <span class="kw">if</span> <span class="var">i</span> % <span class="num">2</span> == <span class="num">0</span>:
+        <span class="kw">continue</span>    <span class="cm"># пропустить чётные числа</span>
+    <span class="builtin">print</span>(<span class="var">i</span>)
+<span class="cm"># Выведет: 1 3 5</span></pre>
+      </div>
+
+      <div class="try-block">
+        <div class="try-header">
+          <div class="try-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Попробуй сам — таблица умножения
+          </div>
+          <button class="try-run-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Запустить
+          </button>
+        </div>
+        <div class="try-editor">
+          <textarea>n = 5
+for i in range(1, 11):
+    print(f"{n} x {i} = {n * i}")</textarea>
+        </div>
+        <div class="try-output">
+          <div class="try-output-label">Вывод</div>
+          <div class="try-output-box"></div>
+        </div>
+      </div>
+
+      <div class="page-nav">
+        <a href="osnovy.html" class="page-nav-btn">
+          <span class="page-nav-label">Предыдущий модуль</span>
+          <span class="page-nav-title">Основы Python</span>
+        </a>
+        <a href="struktury.html" class="page-nav-btn next">
+          <span class="page-nav-label">Следующий модуль</span>
+          <span class="page-nav-title">Структуры данных</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
