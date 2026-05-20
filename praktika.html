@@ -54,7 +54,14 @@
     <div class="sidebar-section">
       <div class="sidebar-section-title">Модуль 7</div>
       <a href="praktika.html" class="sidebar-link active"><span class="sidebar-link-icon">07</span> Практика и итог</a>
-      <a href="praktika.html#zadachi" class="sidebar-link"><span class="sidebar-link-icon">—</span> Задачи по темам</a>
+      <a href="praktika.html#zadaniya" class="sidebar-link"><span class="sidebar-link-icon">—</span> Задания (44 шт.)</a>
+      <a href="praktika.html#tema1" class="sidebar-link"><span class="sidebar-link-icon">—</span> Переменные и вычисления</a>
+      <a href="praktika.html#tema2" class="sidebar-link"><span class="sidebar-link-icon">—</span> Условия и ветвления</a>
+      <a href="praktika.html#tema3" class="sidebar-link"><span class="sidebar-link-icon">—</span> Циклы</a>
+      <a href="praktika.html#tema4" class="sidebar-link"><span class="sidebar-link-icon">—</span> Строки</a>
+      <a href="praktika.html#tema5" class="sidebar-link"><span class="sidebar-link-icon">—</span> Списки</a>
+      <a href="praktika.html#tema6" class="sidebar-link"><span class="sidebar-link-icon">—</span> Словари</a>
+      <a href="praktika.html#tema7" class="sidebar-link"><span class="sidebar-link-icon">—</span> Функции и рекурсия</a>
       <a href="praktika.html#kalkulator" class="sidebar-link"><span class="sidebar-link-icon">—</span> Проект: Калькулятор</a>
       <a href="praktika.html#ugadai" class="sidebar-link"><span class="sidebar-link-icon">—</span> Проект: Угадай число</a>
       <a href="praktika.html#spisok-zadach" class="sidebar-link"><span class="sidebar-link-icon">—</span> Проект: Список задач</a>
@@ -77,144 +84,1138 @@
       <div class="page-header">
         <div class="page-label">Модуль 07</div>
         <h1 class="page-title">Практика и <span>итог</span></h1>
-        <p class="page-desc">Закрепите пройденный материал — решите задачи и разберите три мини-проекта на Python.</p>
+        <p class="page-desc">44 задания для самостоятельной работы, сгруппированные по темам, и три мини-проекта на Python.</p>
       </div>
 
-      <!-- ЗАДАЧИ -->
-      <h2 class="section-h" id="zadachi">Задачи по темам</h2>
-      <p>Решите следующие задачи самостоятельно. Подсказки спрятаны под каждым заданием.</p>
+      <!-- ЗАДАНИЯ ДЛЯ САМОСТОЯТЕЛЬНОЙ РАБОТЫ -->
+      <h2 class="section-h" id="zadaniya">Задания для самостоятельной работы</h2>
+      <p>Попробуйте решить каждую задачу самостоятельно, а затем нажмите <strong>«Посмотреть решение»</strong>, чтобы сравнить с эталоном. Задания расположены от простых к сложным.</p>
 
-      <h3 class="sub-h">Задача 1 — Чётное или нечётное</h3>
-      <p>Напишите программу, которая принимает число и выводит, чётное оно или нечётное.</p>
-      <div class="try-block">
-        <div class="try-header">
-          <div class="try-title">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Задача 1
-          </div>
-          <button class="try-run-btn">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Запустить
-          </button>
+      <div class="task-legend">
+        <span class="task-star-label"><span class="stars easy">★☆☆</span> Базовый</span>
+        <span class="task-star-label"><span class="stars mid">★★☆</span> Средний</span>
+        <span class="task-star-label"><span class="stars hard">★★★</span> Сложный</span>
+      </div>
+
+      <!-- ===== ТЕМА 1 ===== -->
+      <h3 class="task-section-label" id="tema1">Переменные и вычисления</h3>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 1</span>
+          <span class="stars easy">★☆☆</span>
         </div>
-        <div class="try-editor">
-          <textarea>число = 7
+        <h4 class="task-name">Конвертер температуры</h4>
+        <p class="task-text">Напишите программу, которая переводит температуру из Цельсия в Фаренгейт и обратно.<br>Формула: <code class="inline">F = C × 9/5 + 32</code></p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task01.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">цельсий = 25
+фаренгейт = цельсий * 9 / 5 + 32
+print(f"{цельсий}°C = {фаренгейт}°F")
 
-if число % 2 == 0:
-    print(f"{число} — чётное")
+фаренгейт = 98.6
+цельсий = (фаренгейт - 32) * 5 / 9
+print(f"{фаренгейт}°F = {цельсий:.1f}°C")</pre>
+          </div>
+          <div class="task-output">Вывод: <code>25°C = 77.0°F</code> и <code>98.6°F = 37.0°C</code></div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 2</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Площадь и периметр прямоугольника</h4>
+        <p class="task-text">По заданным длине и ширине вычислите площадь и периметр прямоугольника.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task02.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">длина = 8
+ширина = 5
+площадь = длина * ширина
+периметр = 2 * (длина + ширина)
+print(f"Длина: {длина}, Ширина: {ширина}")
+print(f"Площадь: {площадь}")
+print(f"Периметр: {периметр}")</pre>
+          </div>
+          <div class="task-output">Вывод: <code>Площадь: 40</code>, <code>Периметр: 26</code></div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 3</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Индекс массы тела (ИМТ)</h4>
+        <p class="task-text">Вычислите ИМТ по формуле: <code class="inline">ИМТ = масса (кг) / рост² (м)</code> и выведите категорию веса.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task03.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">масса = 70    # кг
+рост  = 1.75  # м
+имт   = масса / рост ** 2
+print(f"ИМТ = {имт:.1f}")
+
+if имт < 18.5:
+    print("Недостаток веса")
+elif имт < 25:
+    print("Нормальный вес")
+elif имт < 30:
+    print("Избыточный вес")
 else:
-    print(f"{число} — нечётное")</textarea>
-        </div>
-        <div class="try-output">
-          <div class="try-output-label">Вывод</div>
-          <div class="try-output-box"></div>
-        </div>
+    print("Ожирение")</pre>
+          </div>
+          <div class="task-output">Вывод: <code>ИМТ = 22.9</code>, <code>Нормальный вес</code></div>
+        </details>
       </div>
 
-      <h3 class="sub-h">Задача 2 — Сумма элементов списка</h3>
-      <p>Напишите функцию, которая принимает список чисел и возвращает их сумму <strong>без использования</strong> встроенной функции <code class="inline">sum()</code>.</p>
-      <div class="try-block">
-        <div class="try-header">
-          <div class="try-title">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Задача 2
-          </div>
-          <button class="try-run-btn">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Запустить
-          </button>
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 4</span>
+          <span class="stars easy">★☆☆</span>
         </div>
-        <div class="try-editor">
-          <textarea>def моя_сумма(числа):
+        <h4 class="task-name">Цена со скидкой</h4>
+        <p class="task-text">Рассчитайте итоговую цену товара с учётом скидки и выведите сумму экономии.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task04.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">цена    = 1500
+скидка  = 20   # %
+итог    = цена * (1 - скидка / 100)
+экономия = цена - итог
+print(f"Цена:     {цена} сом")
+print(f"Скидка:   {скидка}%")
+print(f"Итого:    {итог:.0f} сом")
+print(f"Экономия: {экономия:.0f} сом")</pre>
+          </div>
+          <div class="task-output">Вывод: <code>Итого: 1200 сом</code>, <code>Экономия: 300 сом</code></div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 5</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Перевод времени</h4>
+        <p class="task-text">Переведите заданное количество секунд в формат «часы : минуты : секунды».</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task05.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">секунд_всего = 3725
+часы    = секунд_всего // 3600
+минуты  = (секунд_всего % 3600) // 60
+секунды = секунд_всего % 60
+print(f"{секунд_всего} сек = {часы}ч {минуты}мин {секунды}с")</pre>
+          </div>
+          <div class="task-output">Вывод: <code>3725 сек = 1ч 2мин 5с</code></div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 6</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Расчёт сдачи</h4>
+        <p class="task-text">Покупатель оплачивает товар. Вычислите сдачу и укажите, сколько купюр каждого номинала нужно выдать.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task06.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">цена     = 370
+оплачено = 500
+сдача    = оплачено - цена
+print(f"Сдача: {сдача} сом")
+купюры = [100, 50, 20, 10, 5, 1]
+for купюра in купюры:
+    кол = сдача // купюра
+    if кол > 0:
+        print(f"  {купюра} сом × {кол}")
+        сдача %= купюра</pre>
+          </div>
+          <div class="task-output">Вывод: <code>Сдача: 130 сом</code> → <code>100 × 1</code>, <code>20 × 1</code>, <code>10 × 1</code></div>
+        </details>
+      </div>
+
+      <!-- ===== ТЕМА 2 ===== -->
+      <h3 class="task-section-label" id="tema2">Условия и ветвления</h3>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 7</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Чётное или нечётное</h4>
+        <p class="task-text">Напишите программу, которая принимает число и определяет, чётное оно или нечётное.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task07.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">for число in [0, 3, 7, 12, 99, 100]:
+    if число % 2 == 0:
+        print(f"{число} — чётное")
+    else:
+        print(f"{число} — нечётное")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 8</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Оценка по баллам</h4>
+        <p class="task-text">По количеству баллов (0–100) выведите итоговую оценку: 90+ → «Отлично», 75+ → «Хорошо», 60+ → «Удовлетворительно», иначе → «Неудовлетворительно».</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task08.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">баллы = 87
+if баллы >= 90:
+    оценка = "Отлично (5)"
+elif баллы >= 75:
+    оценка = "Хорошо (4)"
+elif баллы >= 60:
+    оценка = "Удовлетворительно (3)"
+else:
+    оценка = "Неудовлетворительно (2)"
+print(f"Баллы: {баллы} → Оценка: {оценка}")</pre>
+          </div>
+          <div class="task-output">Вывод: <code>Баллы: 87 → Оценка: Хорошо (4)</code></div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 9</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Наибольшее из трёх чисел</h4>
+        <p class="task-text">Без использования функции <code class="inline">max()</code> найдите наибольшее из трёх заданных чисел.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task09.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">a, b, c = 15, 23, 18
+if a >= b and a >= c:
+    наибольшее = a
+elif b >= a and b >= c:
+    наибольшее = b
+else:
+    наибольшее = c
+print(f"Числа: {a}, {b}, {c}")
+print(f"Наибольшее: {наибольшее}")</pre>
+          </div>
+          <div class="task-output">Вывод: <code>Наибольшее: 23</code></div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 10</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Високосный год</h4>
+        <p class="task-text">Год является високосным, если он делится на 4, но не на 100, или делится на 400. Проверьте список годов.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task10.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def високосный(год):
+    return (год % 4 == 0 and год % 100 != 0) or (год % 400 == 0)
+
+for год in [2000, 1900, 2024, 2023, 1600]:
+    статус = "високосный" if високосный(год) else "обычный"
+    print(f"{год} — {статус}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 11</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Существует ли треугольник?</h4>
+        <p class="task-text">Треугольник существует, если сумма любых двух сторон больше третьей. Проверьте несколько наборов сторон.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task11.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def треугольник(a, b, c):
+    return a + b > c and a + c > b and b + c > a
+
+тесты = [(3, 4, 5), (1, 2, 10), (5, 5, 5), (7, 3, 4)]
+for a, b, c in тесты:
+    рез = "существует" if треугольник(a, b, c) else "не существует"
+    print(f"Стороны {a}, {b}, {c} → {рез}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 12</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Квадратное уравнение</h4>
+        <p class="task-text">Решите квадратное уравнение <code class="inline">ax² + bx + c = 0</code> через дискриминант. Обработайте все три случая.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task12.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">import math
+
+def квадратное(a, b, c):
+    д = b**2 - 4*a*c
+    if д > 0:
+        x1 = (-b + math.sqrt(д)) / (2*a)
+        x2 = (-b - math.sqrt(д)) / (2*a)
+        print(f"Два корня: x1={x1:.2f}, x2={x2:.2f}")
+    elif д == 0:
+        x = -b / (2*a)
+        print(f"Один корень: x={x:.2f}")
+    else:
+        print("Нет действительных корней")
+
+квадратное(1, -5, 6)   # x²-5x+6=0
+квадратное(1, -2, 1)   # x²-2x+1=0
+квадратное(1,  1, 5)   # x²+x+5=0</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 13</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Время суток</h4>
+        <p class="task-text">По номеру часа (0–23) выведите приветствие: утро (6–11), день (12–17), вечер (18–22), ночь (23–5).</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task13.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def приветствие(час):
+    if 6 <= час <= 11:
+        return "Доброе утро!"
+    elif 12 <= час <= 17:
+        return "Добрый день!"
+    elif 18 <= час <= 22:
+        return "Добрый вечер!"
+    else:
+        return "Доброй ночи!"
+
+for час in [7, 13, 20, 2]:
+    print(f"{час:02d}:00 → {приветствие(час)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <!-- ===== ТЕМА 3 ===== -->
+      <h3 class="task-section-label" id="tema3">Циклы</h3>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 14</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Таблица умножения</h4>
+        <p class="task-text">Выведите таблицу умножения для числа от 1 до 10 с помощью цикла.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task14.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">n = 7
+print(f"Таблица умножения на {n}:")
+for i in range(1, 11):
+    print(f"  {n} × {i:2} = {n * i:3}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 15</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Факториал числа</h4>
+        <p class="task-text">Вычислите факториал числа n (n!) с помощью цикла, <strong>без</strong> использования модуля <code class="inline">math</code>.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task15.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def факториал(n):
+    результат = 1
+    for i in range(2, n + 1):
+        результат *= i
+    return результат
+
+for n in range(0, 9):
+    print(f"{n}! = {факториал(n)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 16</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Числа Фибоначчи</h4>
+        <p class="task-text">Выведите первые N чисел последовательности Фибоначчи (0, 1, 1, 2, 3, 5, 8…).</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task16.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def фибоначчи(n):
+    a, b = 0, 1
+    числа = []
+    for _ in range(n):
+        числа.append(a)
+        a, b = b, a + b
+    return числа
+
+print(фибоначчи(12))</pre>
+          </div>
+          <div class="task-output">Вывод: <code>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]</code></div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 17</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Сумма цифр числа</h4>
+        <p class="task-text">Напишите программу, которая находит сумму всех цифр заданного числа. Например, для 12345 → 1+2+3+4+5 = 15.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task17.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def сумма_цифр(n):
+    n = abs(n)
     итог = 0
-    for число in числа:
-        итог += число
+    while n > 0:
+        итог += n % 10
+        n //= 10
     return итог
 
-список = [3, 7, 2, 9, 4]
-print(f"Сумма: {моя_сумма(список)}")</textarea>
-        </div>
-        <div class="try-output">
-          <div class="try-output-label">Вывод</div>
-          <div class="try-output-box"></div>
-        </div>
+for число in [12345, 9999, 100, 7]:
+    print(f"Сумма цифр {число} = {сумма_цифр(число)}")</pre>
+          </div>
+        </details>
       </div>
 
-      <h3 class="sub-h">Задача 3 — Таблица умножения</h3>
-      <p>Выведите таблицу умножения для числа от 1 до 10 с помощью цикла.</p>
-      <div class="try-block">
-        <div class="try-header">
-          <div class="try-title">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Задача 3
-          </div>
-          <button class="try-run-btn">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Запустить
-          </button>
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 18</span>
+          <span class="stars easy">★☆☆</span>
         </div>
-        <div class="try-editor">
-          <textarea>def таблица_умножения(n):
-    print(f"Таблица умножения на {n}:")
-    for i in range(1, 11):
-        print(f"  {n} x {i:2} = {n * i:3}")
+        <h4 class="task-name">Кратные 3 или 5</h4>
+        <p class="task-text">Выведите все числа от 1 до 30, которые делятся на 3 или на 5, и найдите их сумму.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task18.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">результат = []
+for i in range(1, 31):
+    if i % 3 == 0 or i % 5 == 0:
+        результат.append(i)
 
-таблица_умножения(7)</textarea>
-        </div>
-        <div class="try-output">
-          <div class="try-output-label">Вывод</div>
-          <div class="try-output-box"></div>
-        </div>
+print("Числа:", результат)
+print(f"Сумма: {sum(результат)}")</pre>
+          </div>
+        </details>
       </div>
 
-      <h3 class="sub-h">Задача 4 — Палиндром</h3>
-      <p>Проверьте, является ли введённая строка палиндромом (читается одинаково в обе стороны).</p>
-      <div class="try-block">
-        <div class="try-header">
-          <div class="try-title">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Задача 4
-          </div>
-          <button class="try-run-btn">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Запустить
-          </button>
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 19</span>
+          <span class="stars easy">★☆☆</span>
         </div>
-        <div class="try-editor">
-          <textarea>def палиндром(слово):
+        <h4 class="task-name">Треугольник из звёздочек</h4>
+        <p class="task-text">Выведите прямой треугольник, перевёрнутый треугольник и пирамиду из символов «*» высотой N строк.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task19.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">n = 5
+print("Прямой:")
+for i in range(1, n + 1):
+    print("*" * i)
+
+print("\nОбратный:")
+for i in range(n, 0, -1):
+    print("*" * i)
+
+print("\nПирамида:")
+for i in range(1, n + 1):
+    print(" " * (n - i) + "*" * (2 * i - 1))</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 20</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Простые числа до N</h4>
+        <p class="task-text">Найдите все простые числа до заданного числа N. Простое — это число, которое делится только на 1 и на себя.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task20.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def простые_до(n):
+    числа = []
+    for число in range(2, n + 1):
+        простое = True
+        for делитель in range(2, int(число ** 0.5) + 1):
+            if число % делитель == 0:
+                простое = False
+                break
+        if простое:
+            числа.append(число)
+    return числа
+
+print(простые_до(50))</pre>
+          </div>
+          <div class="task-output">Вывод: <code>[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]</code></div>
+        </details>
+      </div>
+
+      <!-- ===== ТЕМА 4 ===== -->
+      <h3 class="task-section-label" id="tema4">Строки</h3>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 21</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Палиндром</h4>
+        <p class="task-text">Проверьте, является ли слово палиндромом — читается одинаково слева направо и справа налево.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task21.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def палиндром(слово):
     слово = слово.lower().replace(" ", "")
     return слово == слово[::-1]
 
 слова = ["kayak", "python", "level", "radar", "hello"]
 for слово in слова:
-    результат = "палиндром" if палиндром(слово) else "не палиндром"
-    print(f'"{слово}" — {результат}')</textarea>
-        </div>
-        <div class="try-output">
-          <div class="try-output-label">Вывод</div>
-          <div class="try-output-box"></div>
-        </div>
+    рез = "палиндром" if палиндром(слово) else "не палиндром"
+    print(f'"{слово}" — {рез}')</pre>
+          </div>
+        </details>
       </div>
 
-      <!-- ПРОЕКТ 1: КАЛЬКУЛЯТОР -->
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 22</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Подсчёт гласных</h4>
+        <p class="task-text">Подсчитайте количество гласных букв в строке (учитывайте и русские, и латинские).</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task22.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def подсчёт_гласных(текст):
+    гласные = "аеёиоуыэюяaeiou"
+    return sum(1 for б in текст.lower() if б in гласные)
+
+предложения = ["Python лучший язык", "Hello World", "Привет мир"]
+for s in предложения:
+    print(f'"{s}" → гласных: {подсчёт_гласных(s)}')</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 23</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Разворот слов в предложении</h4>
+        <p class="task-text">Переверните порядок слов в предложении. Например: «Привет мир Python» → «Python мир Привет».</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task23.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def разворот_слов(текст):
+    слова = текст.split()
+    return " ".join(reversed(слова))
+
+примеры = ["Привет мир Python", "один два три четыре"]
+for s in примеры:
+    print(f'"{s}"')
+    print(f'  → "{разворот_слов(s)}"')</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 24</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Шифр Цезаря</h4>
+        <p class="task-text">Зашифруйте строку сдвигом букв латинского алфавита на заданное число позиций. Реализуйте и шифрование, и расшифровку.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task24.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def цезарь(текст, сдвиг):
+    результат = ""
+    for буква in текст:
+        if буква.isalpha():
+            база = ord('A') if буква.isupper() else ord('a')
+            результат += chr((ord(буква) - база + сдвиг) % 26 + база)
+        else:
+            результат += буква
+    return результат
+
+текст = "Hello Python"
+зашифровано = цезарь(текст, 3)
+расшифровано = цезарь(зашифровано, -3)
+print(f"Исходный:    {текст}")
+print(f"Зашифрован:  {зашифровано}")
+print(f"Расшифрован: {расшифровано}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 25</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Самое длинное слово</h4>
+        <p class="task-text">Найдите самое длинное слово в предложении. Если таких несколько — выведите первое.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task25.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def самое_длинное(текст):
+    слова = текст.split()
+    return max(слова, key=len)
+
+предложения = [
+    "Кыргызский государственный технический университет",
+    "Python programming language is awesome"
+]
+for s in предложения:
+    слово = самое_длинное(s)
+    print(f'Длиннейшее слово: "{слово}" ({len(слово)} букв)')</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 26</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Анаграммы</h4>
+        <p class="task-text">Два слова являются анаграммами, если состоят из одинаковых букв. Проверьте несколько пар слов.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task26.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def анаграмма(с1, с2):
+    return sorted(с1.lower()) == sorted(с2.lower())
+
+пары = [("listen", "silent"), ("hello", "world"),
+        ("race", "care"), ("python", "typhon")]
+for с1, с2 in пары:
+    рез = "анаграммы" if анаграмма(с1, с2) else "не анаграммы"
+    print(f'"{с1}" и "{с2}" — {рез}')</pre>
+          </div>
+        </details>
+      </div>
+
+      <!-- ===== ТЕМА 5 ===== -->
+      <h3 class="task-section-label" id="tema5">Списки</h3>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 27</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Сумма элементов списка</h4>
+        <p class="task-text">Напишите функцию, которая возвращает сумму элементов списка <strong>без использования</strong> встроенной <code class="inline">sum()</code>.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task27.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def моя_сумма(числа):
+    итог = 0
+    for число in числа:
+        итог += число
+    return итог
+
+список = [3, 7, 2, 9, 4, 11]
+print(f"Список: {список}")
+print(f"Сумма: {моя_сумма(список)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 28</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Максимум без max()</h4>
+        <p class="task-text">Найдите наибольший элемент списка, не используя встроенную функцию <code class="inline">max()</code>.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task28.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def мой_макс(числа):
+    наибольшее = числа[0]
+    for число in числа[1:]:
+        if число > наибольшее:
+            наибольшее = число
+    return наибольшее
+
+список = [14, 7, 23, 5, 9, 31, 2]
+print(f"Список:   {список}")
+print(f"Максимум: {мой_макс(список)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 29</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Удалить дубликаты</h4>
+        <p class="task-text">Удалите из списка повторяющиеся элементы, сохранив исходный порядок (без использования <code class="inline">set()</code>).</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task29.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def без_дубликатов(список):
+    результат = []
+    for элемент in список:
+        if элемент not in результат:
+            результат.append(элемент)
+    return результат
+
+числа = [1, 2, 3, 2, 4, 3, 5, 1, 6]
+print(f"Исходный:       {числа}")
+print(f"Без дубликатов: {без_дубликатов(числа)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 30</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Сортировка пузырьком</h4>
+        <p class="task-text">Реализуйте алгоритм сортировки пузырьком. Не используйте встроенные функции <code class="inline">sort()</code> и <code class="inline">sorted()</code>.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task30.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def пузырёк(список):
+    список = список.copy()
+    n = len(список)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if список[j] > список[j + 1]:
+                список[j], список[j + 1] = список[j + 1], список[j]
+    return список
+
+числа = [64, 34, 25, 12, 22, 11, 90]
+print(f"Исходный:       {числа}")
+print(f"Отсортированный: {пузырёк(числа)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 31</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Среднее значение</h4>
+        <p class="task-text">Вычислите среднее, минимальное и максимальное значения списка оценок студентов.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task31.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">оценки = [85, 92, 78, 90, 88, 76, 95, 83]
+среднее = sum(оценки) / len(оценки)
+print(f"Оценки:   {оценки}")
+print(f"Среднее:  {среднее:.1f}")
+print(f"Минимум:  {min(оценки)}")
+print(f"Максимум: {max(оценки)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 32</span>
+          <span class="stars easy">★☆☆</span>
+        </div>
+        <h4 class="task-name">Разворот списка</h4>
+        <p class="task-text">Переверните список <strong>без</strong> использования метода <code class="inline">reverse()</code> и срезов <code class="inline">[::-1]</code>.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task32.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def развернуть(список):
+    результат = []
+    for i in range(len(список) - 1, -1, -1):
+        результат.append(список[i])
+    return результат
+
+числа = [1, 2, 3, 4, 5]
+print(f"Исходный:   {числа}")
+print(f"Развёрнутый: {развернуть(числа)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <!-- ===== ТЕМА 6 ===== -->
+      <h3 class="task-section-label" id="tema6">Словари</h3>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 33</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Частота букв</h4>
+        <p class="task-text">Подсчитайте, сколько раз каждая буква встречается в строке. Результат отсортируйте по убыванию частоты.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task33.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def частота_букв(текст):
+    счётчик = {}
+    for буква in текст.lower():
+        if буква.isalpha():
+            счётчик[буква] = счётчик.get(буква, 0) + 1
+    return dict(sorted(счётчик.items(), key=lambda x: x[1], reverse=True))
+
+текст = "python programming"
+рез = частота_букв(текст)
+print(f"Текст: '{текст}'")
+for буква, кол in list(рез.items())[:5]:
+    print(f"  '{буква}': {кол} раз")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 34</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Подсчёт слов в тексте</h4>
+        <p class="task-text">Подсчитайте, сколько раз каждое слово встречается в тексте. Выведите топ-3 самых частых слова.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task34.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">текст = "яблоко груша яблоко банан груша яблоко манго банан"
+слова = {}
+for слово in текст.split():
+    слова[слово] = слова.get(слово, 0) + 1
+
+топ = sorted(слова.items(), key=lambda x: x[1], reverse=True)
+print("Топ-3 слова:")
+for слово, кол in топ[:3]:
+    print(f"  {слово}: {кол} раз")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 35</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Инвертировать словарь</h4>
+        <p class="task-text">Создайте новый словарь, поменяв местами ключи и значения исходного словаря.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task35.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">исходный = {
+    "яблоко": "apple",
+    "банан":  "banana",
+    "груша":  "pear"
+}
+инвертированный = {знач: ключ for ключ, знач in исходный.items()}
+print("Исходный:        ", исходный)
+print("Инвертированный: ", инвертированный)</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 36</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Оценки студентов</h4>
+        <p class="task-text">Храните оценки нескольких студентов в словаре. Найдите среднее каждого и выведите лучшего.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task36.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">студенты = {
+    "Нурмухаммед": [85, 90, 78, 92],
+    "Айгерим":     [76, 88, 95, 84],
+    "Даниял":      [92, 87, 94, 96],
+}
+for имя, оценки in студенты.items():
+    среднее = sum(оценки) / len(оценки)
+    print(f"{имя}: среднее {среднее:.1f}")
+
+лучший = max(студенты, key=lambda x: sum(студенты[x]) / len(студенты[x]))
+print(f"\nЛучший студент: {лучший}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 37</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Группировка слов по длине</h4>
+        <p class="task-text">Сгруппируйте слова из списка по количеству букв в каждом слове.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task37.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">слова = ["кот", "питон", "пёс", "кит", "банан", "сом", "лев", "дракон"]
+по_длине = {}
+for слово in слова:
+    длина = len(слово)
+    по_длине.setdefault(длина, []).append(слово)
+
+for длина, список in sorted(по_длине.items()):
+    print(f"  {длина} букв: {список}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 38</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Телефонная книга</h4>
+        <p class="task-text">Реализуйте простую телефонную книгу: добавление, поиск и вывод всех контактов.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task38.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">книга = {}
+
+def добавить(имя, номер):
+    книга[имя] = номер
+    print(f"Добавлен: {имя}")
+
+def найти(имя):
+    return книга.get(имя, "Контакт не найден")
+
+def все_контакты():
+    for имя, номер in sorted(книга.items()):
+        print(f"  {имя}: {номер}")
+
+добавить("Мама",    "+996 555 001 001")
+добавить("Папа",    "+996 555 002 002")
+добавить("Коллега", "+996 700 123 456")
+
+print(найти("Мама"))
+print(найти("Незнакомец"))
+все_контакты()</pre>
+          </div>
+        </details>
+      </div>
+
+      <!-- ===== ТЕМА 7 ===== -->
+      <h3 class="task-section-label" id="tema7">Функции и рекурсия</h3>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 39</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">НОД — алгоритм Евклида</h4>
+        <p class="task-text">Реализуйте нахождение наибольшего общего делителя двух чисел с помощью алгоритма Евклида.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task39.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def нод(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+пары = [(48, 18), (100, 75), (17, 5), (56, 98)]
+for a, b in пары:
+    print(f"НОД({a}, {b}) = {нод(a, b)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 40</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">НОК двух чисел</h4>
+        <p class="task-text">Вычислите наименьшее общее кратное двух чисел. Используйте формулу: <code class="inline">НОК(a, b) = a × b / НОД(a, b)</code>.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task40.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def нод(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+def нок(a, b):
+    return a * b // нод(a, b)
+
+for a, b in [(4, 6), (12, 18), (7, 5)]:
+    print(f"НОК({a}, {b}) = {нок(a, b)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 41</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Перевод в двоичную систему</h4>
+        <p class="task-text">Переведите десятичное число в двоичное представление вручную, без использования функции <code class="inline">bin()</code>.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task41.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def в_двоичную(n):
+    if n == 0:
+        return "0"
+    биты = []
+    while n > 0:
+        биты.append(str(n % 2))
+        n //= 2
+    return "".join(reversed(биты))
+
+for n in [0, 1, 5, 10, 255]:
+    print(f"{n:3d} → {в_двоичную(n):8s}  (проверка: {bin(n)[2:]})")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 42</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Рекурсивный факториал</h4>
+        <p class="task-text">Вычислите факториал числа с помощью рекурсии. Определите базовый случай и рекурсивный шаг.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task42.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def факториал(n):
+    if n <= 1:        # базовый случай
+        return 1
+    return n * факториал(n - 1)  # рекурсивный шаг
+
+for i in range(8):
+    print(f"{i}! = {факториал(i)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 43</span>
+          <span class="stars mid">★★☆</span>
+        </div>
+        <h4 class="task-name">Рекурсия: сумма цифр</h4>
+        <p class="task-text">Вычислите сумму цифр числа с помощью рекурсии (не цикла).</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task43.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def сумма_цифр(n):
+    n = abs(n)
+    if n < 10:          # одна цифра — базовый случай
+        return n
+    return n % 10 + сумма_цифр(n // 10)
+
+for n in [12345, 9999, 0, 100]:
+    print(f"сумма_цифр({n}) = {сумма_цифр(n)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <div class="task-card">
+        <div class="task-header-row">
+          <span class="task-badge">Задача 44</span>
+          <span class="stars hard">★★★</span>
+        </div>
+        <h4 class="task-name">Быстрое возведение в степень</h4>
+        <p class="task-text">Реализуйте рекурсивное возведение числа в степень за O(log n) шагов с использованием метода быстрого возведения.</p>
+        <details class="task-details">
+          <summary>Посмотреть решение</summary>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">task44.py</span><button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button></div>
+            <pre class="code">def степень(основание, показатель):
+    if показатель == 0:
+        return 1
+    if показатель < 0:
+        return 1 / степень(основание, -показатель)
+    if показатель % 2 == 0:          # чётная степень
+        половина = степень(основание, показатель // 2)
+        return половина * половина   # один вызов вместо двух
+    return основание * степень(основание, показатель - 1)
+
+for осн, пок in [(2, 10), (3, 5), (5, 0), (2, -3)]:
+    print(f"{осн}^{пок} = {степень(осн, пок)}")</pre>
+          </div>
+        </details>
+      </div>
+
+      <!-- ПРОЕКТ 1 -->
       <h2 class="section-h" id="kalkulator">Проект 1 — Калькулятор</h2>
-      <p>
-        Создадим простой консольный калькулятор, который выполняет основные арифметические операции.
-        Этот проект объединяет функции, условия и обработку ввода.
-      </p>
+      <p>Создадим простой консольный калькулятор, который выполняет основные арифметические операции. Проект объединяет функции, словарь и условия.</p>
       <div class="code-block">
         <div class="code-block-header">
           <span class="code-lang">calculator.py</span>
           <button class="copy-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать</button>
         </div>
-        <pre class="code"><span class="kw">def</span> <span class="fn">сложить</span>(<span class="var">a</span>, <span class="var">b</span>):
-    <span class="kw">return</span> <span class="var">a</span> + <span class="var">b</span>
-
-<span class="kw">def</span> <span class="fn">вычесть</span>(<span class="var">a</span>, <span class="var">b</span>):
-    <span class="kw">return</span> <span class="var">a</span> - <span class="var">b</span>
-
-<span class="kw">def</span> <span class="fn">умножить</span>(<span class="var">a</span>, <span class="var">b</span>):
-    <span class="kw">return</span> <span class="var">a</span> * <span class="var">b</span>
+        <pre class="code"><span class="kw">def</span> <span class="fn">сложить</span>(<span class="var">a</span>, <span class="var">b</span>): <span class="kw">return</span> <span class="var">a</span> + <span class="var">b</span>
+<span class="kw">def</span> <span class="fn">вычесть</span>(<span class="var">a</span>, <span class="var">b</span>): <span class="kw">return</span> <span class="var">a</span> - <span class="var">b</span>
+<span class="kw">def</span> <span class="fn">умножить</span>(<span class="var">a</span>, <span class="var">b</span>): <span class="kw">return</span> <span class="var">a</span> * <span class="var">b</span>
 
 <span class="kw">def</span> <span class="fn">разделить</span>(<span class="var">a</span>, <span class="var">b</span>):
     <span class="kw">if</span> <span class="var">b</span> == <span class="num">0</span>:
@@ -222,42 +1223,19 @@ for слово in слова:
     <span class="kw">return</span> <span class="var">a</span> / <span class="var">b</span>
 
 <span class="kw">def</span> <span class="fn">калькулятор</span>(<span class="var">a</span>, <span class="var">операция</span>, <span class="var">b</span>):
-    <span class="var">операции</span> = {
-        <span class="str">"+"</span>: <span class="fn">сложить</span>,
-        <span class="str">"-"</span>: <span class="fn">вычесть</span>,
-        <span class="str">"*"</span>: <span class="fn">умножить</span>,
-        <span class="str">"/"</span>: <span class="fn">разделить</span>
-    }
+    <span class="var">операции</span> = {<span class="str">"+"</span>: <span class="fn">сложить</span>, <span class="str">"-"</span>: <span class="fn">вычесть</span>, <span class="str">"*"</span>: <span class="fn">умножить</span>, <span class="str">"/"</span>: <span class="fn">разделить</span>}
     <span class="kw">if</span> <span class="var">операция</span> <span class="kw">not in</span> <span class="var">операции</span>:
         <span class="kw">return</span> <span class="str">"Неизвестная операция"</span>
-    <span class="var">функция</span> = <span class="var">операции</span>[<span class="var">операция</span>]
-    <span class="kw">return</span> <span class="fn">функция</span>(<span class="var">a</span>, <span class="var">b</span>)
+    <span class="kw">return</span> <span class="var">операции</span>[<span class="var">операция</span>](<span class="var">a</span>, <span class="var">b</span>)
 
-<span class="cm"># Тестирование</span>
-<span class="var">примеры</span> = [
-    (<span class="num">10</span>, <span class="str">"+"</span>, <span class="num">5</span>),
-    (<span class="num">10</span>, <span class="str">"-"</span>, <span class="num">3</span>),
-    (<span class="num">4</span>,  <span class="str">"*"</span>, <span class="num">7</span>),
-    (<span class="num">15</span>, <span class="str">"/"</span>, <span class="num">4</span>),
-    (<span class="num">9</span>,  <span class="str">"/"</span>, <span class="num">0</span>),
-]
-
-<span class="kw">for</span> <span class="var">a</span>, <span class="var">оп</span>, <span class="var">b</span> <span class="kw">in</span> <span class="var">примеры</span>:
-    <span class="var">рез</span> = <span class="fn">калькулятор</span>(<span class="var">a</span>, <span class="var">оп</span>, <span class="var">b</span>)
-    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"{a} {оп} {b} = {рез}"</span>)</pre>
+<span class="kw">for</span> <span class="var">a</span>, <span class="var">оп</span>, <span class="var">b</span> <span class="kw">in</span> [(<span class="num">10</span>, <span class="str">"+"</span>, <span class="num">5</span>), (<span class="num">10</span>, <span class="str">"-"</span>, <span class="num">3</span>), (<span class="num">4</span>, <span class="str">"*"</span>, <span class="num">7</span>), (<span class="num">15</span>, <span class="str">"/"</span>, <span class="num">4</span>), (<span class="num">9</span>, <span class="str">"/"</span>, <span class="num">0</span>)]:
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"{a} {оп} {b} = {калькулятор(a, оп, b)}"</span>)</pre>
       </div>
+      <div class="info-box"><strong>Что использовано:</strong> функции, словарь как диспетчер операций, цикл for, обработка деления на ноль, f-строки.</div>
 
-      <div class="info-box">
-        <strong>Что использовано:</strong> функции, словарь как диспетчер операций, цикл for,
-        обработка ошибки деления на ноль, f-строки для форматирования вывода.
-      </div>
-
-      <!-- ПРОЕКТ 2: УГАДАЙ ЧИСЛО -->
+      <!-- ПРОЕКТ 2 -->
       <h2 class="section-h" id="ugadai">Проект 2 — Угадай число</h2>
-      <p>
-        Программа загадывает случайное число от 1 до 100. Игрок вводит попытки, и программа подсказывает
-        «больше» или «меньше». Используем модуль <code class="inline">random</code> из стандартной библиотеки.
-      </p>
+      <p>Программа загадывает случайное число от 1 до 100. Игрок вводит попытки, а программа подсказывает «больше» или «меньше». Используется модуль <code class="inline">random</code>.</p>
       <div class="code-block">
         <div class="code-block-header">
           <span class="code-lang">guess_game.py</span>
@@ -268,41 +1246,36 @@ for слово in слова:
 <span class="kw">def</span> <span class="fn">игра_угадай_число</span>():
     <span class="var">загаданное</span> = <span class="var">random</span>.<span class="fn">randint</span>(<span class="num">1</span>, <span class="num">100</span>)
     <span class="var">попыток</span> = <span class="num">0</span>
-    <span class="var">максимум_попыток</span> = <span class="num">7</span>
+    <span class="var">максимум</span> = <span class="num">7</span>
 
     <span class="builtin">print</span>(<span class="str">"Я загадал число от 1 до 100."</span>)
-    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"У вас {максимум_попыток} попыток.\n"</span>)
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"У вас {максимум} попыток.\n"</span>)
 
-    <span class="kw">while</span> <span class="var">попыток</span> < <span class="var">максимум_попыток</span>:
+    <span class="kw">while</span> <span class="var">попыток</span> &lt; <span class="var">максимум</span>:
         <span class="var">попыток</span> += <span class="num">1</span>
-        <span class="var">осталось</span> = <span class="var">максимум_попыток</span> - <span class="var">попыток</span> + <span class="num">1</span>
-
         <span class="kw">try</span>:
-            <span class="var">попытка</span> = <span class="builtin">int</span>(<span class="builtin">input</span>(<span class="fn">f</span><span class="str">"Попытка {попыток}/{максимум_попыток}: "</span>))
+            <span class="var">попытка</span> = <span class="builtin">int</span>(<span class="builtin">input</span>(<span class="fn">f</span><span class="str">"Попытка {попыток}/{максимум}: "</span>))
         <span class="kw">except</span> <span class="var">ValueError</span>:
             <span class="builtin">print</span>(<span class="str">"Введите целое число!\n"</span>)
             <span class="var">попыток</span> -= <span class="num">1</span>
             <span class="kw">continue</span>
 
         <span class="kw">if</span> <span class="var">попытка</span> == <span class="var">загаданное</span>:
-            <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"\nПравильно! Вы угадали за {попыток} попыток!"</span>)
+            <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"\nПравильно! Угадали за {попыток} попыток!"</span>)
             <span class="kw">return</span>
-        <span class="kw">elif</span> <span class="var">попытка</span> < <span class="var">загаданное</span>:
-            <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Больше. Осталось попыток: {осталось - 1}\n"</span>)
+        <span class="kw">elif</span> <span class="var">попытка</span> &lt; <span class="var">загаданное</span>:
+            <span class="builtin">print</span>(<span class="str">"Больше.\n"</span>)
         <span class="kw">else</span>:
-            <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Меньше. Осталось попыток: {осталось - 1}\n"</span>)
+            <span class="builtin">print</span>(<span class="str">"Меньше.\n"</span>)
 
     <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"\nПопытки закончились. Загаданное число: {загаданное}"</span>)
 
 <span class="fn">игра_угадай_число</span>()</pre>
       </div>
 
-      <!-- ПРОЕКТ 3: СПИСОК ЗАДАЧ -->
+      <!-- ПРОЕКТ 3 -->
       <h2 class="section-h" id="spisok-zadach">Проект 3 — Менеджер задач</h2>
-      <p>
-        Консольное приложение для управления списком дел. Демонстрирует работу со словарями,
-        списками и функциями в связке.
-      </p>
+      <p>Консольное приложение для управления списком дел. Демонстрирует работу со словарями, списками и функциями.</p>
       <div class="code-block">
         <div class="code-block-header">
           <span class="code-lang">todo.py</span>
@@ -310,93 +1283,58 @@ for слово in слова:
         </div>
         <pre class="code"><span class="var">задачи</span> = []
 
-<span class="kw">def</span> <span class="fn">добавить_задачу</span>(<span class="var">название</span>):
-    <span class="var">задача</span> = {<span class="str">"название"</span>: <span class="var">название</span>, <span class="str">"выполнено"</span>: <span class="kw">False</span>}
-    <span class="var">задачи</span>.<span class="fn">append</span>(<span class="var">задача</span>)
+<span class="kw">def</span> <span class="fn">добавить</span>(<span class="var">название</span>):
+    <span class="var">задачи</span>.<span class="fn">append</span>({<span class="str">"название"</span>: <span class="var">название</span>, <span class="str">"выполнено"</span>: <span class="kw">False</span>})
     <span class="builtin">print</span>(<span class="fn">f</span><span class="str">'Добавлено: "{название}"'</span>)
 
-<span class="kw">def</span> <span class="fn">выполнить_задачу</span>(<span class="var">номер</span>):
-    <span class="kw">if</span> <span class="num">0</span> <= <span class="var">номер</span> < <span class="builtin">len</span>(<span class="var">задачи</span>):
+<span class="kw">def</span> <span class="fn">выполнить</span>(<span class="var">номер</span>):
+    <span class="kw">if</span> <span class="num">0</span> &lt;= <span class="var">номер</span> &lt; <span class="builtin">len</span>(<span class="var">задачи</span>):
         <span class="var">задачи</span>[<span class="var">номер</span>][<span class="str">"выполнено"</span>] = <span class="kw">True</span>
         <span class="builtin">print</span>(<span class="fn">f</span><span class="str">'Выполнено: "{задачи[номер]["название"]}"'</span>)
-    <span class="kw">else</span>:
-        <span class="builtin">print</span>(<span class="str">"Задача не найдена"</span>)
 
-<span class="kw">def</span> <span class="fn">показать_задачи</span>():
+<span class="kw">def</span> <span class="fn">показать</span>():
     <span class="kw">if not</span> <span class="var">задачи</span>:
-        <span class="builtin">print</span>(<span class="str">"Список задач пуст"</span>)
+        <span class="builtin">print</span>(<span class="str">"Список пуст"</span>)
         <span class="kw">return</span>
     <span class="builtin">print</span>(<span class="str">"\n--- Список задач ---"</span>)
     <span class="kw">for</span> <span class="var">i</span>, <span class="var">з</span> <span class="kw">in</span> <span class="builtin">enumerate</span>(<span class="var">задачи</span>):
         <span class="var">статус</span> = <span class="str">"[+]"</span> <span class="kw">if</span> <span class="var">з</span>[<span class="str">"выполнено"</span>] <span class="kw">else</span> <span class="str">"[ ]"</span>
         <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"  {i}. {статус} {з['название']}"</span>)
-    <span class="var">выполнено</span> = <span class="builtin">sum</span>(<span class="num">1</span> <span class="kw">for</span> <span class="var">з</span> <span class="kw">in</span> <span class="var">задачи</span> <span class="kw">if</span> <span class="var">з</span>[<span class="str">"выполнено"</span>])
-    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Выполнено: {выполнено}/{len(задачи)}\n"</span>)
+    <span class="var">готово</span> = <span class="builtin">sum</span>(<span class="num">1</span> <span class="kw">for</span> <span class="var">з</span> <span class="kw">in</span> <span class="var">задачи</span> <span class="kw">if</span> <span class="var">з</span>[<span class="str">"выполнено"</span>])
+    <span class="builtin">print</span>(<span class="fn">f</span><span class="str">"Выполнено: {готово}/{len(задачи)}\n"</span>)
 
-<span class="cm"># Демонстрация</span>
-<span class="fn">добавить_задачу</span>(<span class="str">"Изучить переменные Python"</span>)
-<span class="fn">добавить_задачу</span>(<span class="str">"Разобрать циклы for и while"</span>)
-<span class="fn">добавить_задачу</span>(<span class="str">"Написать первую функцию"</span>)
-<span class="fn">добавить_задачу</span>(<span class="str">"Сделать проект-калькулятор"</span>)
-
-<span class="fn">выполнить_задачу</span>(<span class="num">0</span>)
-<span class="fn">выполнить_задачу</span>(<span class="num">1</span>)
-<span class="fn">показать_задачи</span>()</pre>
+<span class="fn">добавить</span>(<span class="str">"Изучить переменные Python"</span>)
+<span class="fn">добавить</span>(<span class="str">"Разобрать циклы for и while"</span>)
+<span class="fn">добавить</span>(<span class="str">"Написать первую функцию"</span>)
+<span class="fn">добавить</span>(<span class="str">"Сделать проект-калькулятор"</span>)
+<span class="fn">выполнить</span>(<span class="num">0</span>)
+<span class="fn">выполнить</span>(<span class="num">1</span>)
+<span class="fn">показать</span>()</pre>
       </div>
 
       <!-- ИТОГ -->
       <h2 class="section-h" id="itog">Итог курса</h2>
       <p>Поздравляем с завершением курса! Вот что вы изучили:</p>
-
       <div class="table-wrap">
         <table class="data-table">
           <thead>
             <tr><th>Модуль</th><th>Тема</th><th>Ключевые навыки</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td>01</td>
-              <td>Введение в Python</td>
-              <td>История языка, области применения, преимущества</td>
-            </tr>
-            <tr>
-              <td>02</td>
-              <td>Начало работы</td>
-              <td>Установка, VS Code, первая программа, запуск файлов</td>
-            </tr>
-            <tr>
-              <td>03</td>
-              <td>Основы Python</td>
-              <td>Переменные, типы данных, операторы, строки, ввод/вывод</td>
-            </tr>
-            <tr>
-              <td>04</td>
-              <td>Условия и циклы</td>
-              <td>if/elif/else, for, while, break, continue</td>
-            </tr>
-            <tr>
-              <td>05</td>
-              <td>Структуры данных</td>
-              <td>list, tuple, dict, set — создание и методы</td>
-            </tr>
-            <tr>
-              <td>06</td>
-              <td>Функции</td>
-              <td>def, параметры, return, lambda, встроенные функции</td>
-            </tr>
-            <tr>
-              <td>07</td>
-              <td>Практика и итог</td>
-              <td>Задачи, калькулятор, игра, менеджер задач</td>
-            </tr>
+            <tr><td>01</td><td>Введение в Python</td><td>История языка, области применения, преимущества</td></tr>
+            <tr><td>02</td><td>Начало работы</td><td>Установка, VS Code, первая программа, запуск файлов</td></tr>
+            <tr><td>03</td><td>Основы Python</td><td>Переменные, типы данных, операторы, строки, ввод/вывод</td></tr>
+            <tr><td>04</td><td>Условия и циклы</td><td>if/elif/else, for, while, break, continue</td></tr>
+            <tr><td>05</td><td>Структуры данных</td><td>list, tuple, dict, set — создание и методы</td></tr>
+            <tr><td>06</td><td>Функции</td><td>def, параметры, return, lambda, встроенные функции</td></tr>
+            <tr><td>07</td><td>Практика и итог</td><td>44 задания, калькулятор, игра, менеджер задач</td></tr>
           </tbody>
         </table>
       </div>
-
       <div class="info-box">
-        <strong>Что дальше?</strong> После освоения этого курса вы готовы двигаться дальше:
-        изучите объектно-ориентированное программирование (классы и объекты),
-        работу с файлами и базами данных, а затем выберите направление —
+        <strong>Что дальше?</strong> После освоения этого курса вы готовы двигаться вперёд:
+        объектно-ориентированное программирование (классы и объекты),
+        работа с файлами и базами данных, а затем выберите направление —
         веб-разработка (Django/Flask), анализ данных (pandas/NumPy) или автоматизация.
       </div>
 
